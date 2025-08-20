@@ -1,0 +1,20 @@
+[user]
+	signingkey = D34D3B43F5A1C622
+	email = manhnb1911@gmail.com
+	name = Manh Nguyen
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[push]
+	autoSetupRemote = true
+	followTags = true
+[pull]
+	ff = only
+[alias]
+	yike = "!git fetch -p && git pull"
+[core]
+	editor = vim
+	autocrlf = input
+[init]
+	defaultBranch = master
