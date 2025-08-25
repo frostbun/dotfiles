@@ -4,9 +4,14 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
+let g:airline_theme='deus'
+let g:airline_powerline_fonts = 1
+
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
 
@@ -27,7 +32,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
-set scrolloff=5
+set scrolloff=10
 
 set nowrap
 

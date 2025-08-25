@@ -1,13 +1,12 @@
 zsh
 git-lfs
+reflector
 google-chrome
 discord
 unityhub
 rider
 visual-studio-code-bin
-gnome-browser-connector
 kitty
-gimp
 btop
 ranger
 libreoffice-still
@@ -27,6 +26,11 @@ android-sdk
 android-udev
 vlc
 gimp
-ocs-url
+darktable
 ttf-jetbrains-mono
 vial-appimage
+docker
+docker-compose
+anydesk-bin
+gnome-browser-connector
+ocs-url
