@@ -1,0 +1,133 @@
+[/]
+app-picker-layout=[{'fb13aed0-e790-4e7d-9f66-bb6553068d55': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Music.desktop': <{'position': <3>}>, 'org.gnome.Settings.desktop': <{'position': <4>}>, 'org.gnome.Totem.desktop': <{'position': <5>}>, 'org.gnome.Snapshot.desktop': <{'position': <6>}>, 'org.gnome.Characters.desktop': <{'position': <7>}>, 'Utilities': <{'position': <8>}>, 'System': <{'position': <9>}>, 'org.gnome.Calculator.desktop': <{'position': <10>}>, 'org.gnome.Calendar.desktop': <{'position': <11>}>, 'org.gnome.SimpleScan.desktop': <{'position': <12>}>, 'org.gnome.Extensions.desktop': <{'position': <13>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <14>}>, 'ranger.desktop': <{'position': <15>}>, 'btop.desktop': <{'position': <16>}>}, {'22b43f53-c918-4008-863e-4cbd4c17a14d': <{'position': <0>}>, 'qv4l2.desktop': <{'position': <1>}>, 'qvidcap.desktop': <{'position': <2>}>, 'anydesk.desktop': <{'position': <3>}>, 'vim.desktop': <{'position': <4>}>, 'asset-ripper.desktop': <{'position': <5>}>, '4df6f9a6-b48b-46a9-9843-a07c92bc8b28': <{'position': <6>}>, 'steam.desktop': <{'position': <7>}>, 'vlc.desktop': <{'position': <8>}>, 'com.cloudflare.WarpTaskbar.desktop': <{'position': <9>}>, 'cmake-gui.desktop': <{'position': <10>}>, 'ad9e9866-598f-425e-b8b1-4cff6e4b98ee': <{'position': <11>}>, 'gparted.desktop': <{'position': <12>}>, 'lstopo.desktop': <{'position': <13>}>, 'Vial.desktop': <{'position': <14>}>, 'winbox.desktop': <{'position': <15>}>, '0962d50f-eade-4dbf-a904-b5e9f1ea5a6b': <{'position': <16>}>}]
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-dock@micxgx.gmail.com', 'default-workspace@mateusrodcosta.com', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'rounded-window-corners@fxgn', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
+welcome-dialog-last-shown-version='48.4'
+
+[app-switcher]
+current-workspace-only=true
+
+[extensions/blur-my-shell]
+settings-version=2
+
+[extensions/blur-my-shell/appfolder]
+brightness=0.59999999999999998
+sigma=30
+
+[extensions/blur-my-shell/dash-to-dock]
+blur=true
+brightness=0.59999999999999998
+sigma=30
+static-blur=true
+style-dash-to-dock=0
+
+[extensions/blur-my-shell/panel]
+brightness=0.59999999999999998
+sigma=30
+
+[extensions/blur-my-shell/window-list]
+brightness=0.59999999999999998
+sigma=30
+
+[extensions/burn-my-windows]
+active-profile='/home/frostbun/.config/burn-my-windows/profiles/1755067027999983.conf'
+last-extension-version=46
+last-prefs-version=46
+prefs-open-count=8
+
+[extensions/clipboard-history]
+display-mode=2
+strip-text=true
+toggle-menu=['<Super>v']
+toggle-private-mode=@as []
+topbar-preview-size=16
+window-width-percentage=20
+
+[extensions/dash-to-dock]
+animation-time=0.20000000000000001
+apply-custom-theme=false
+apply-glossy-effect=false
+autohide=true
+autohide-in-fullscreen=false
+background-color='rgb(0,0,0)'
+background-opacity=0.0
+click-action='focus-minimize-or-previews'
+custom-background-color=true
+custom-theme-customize-running-dots=false
+custom-theme-running-dots-border-color='rgb(255,255,255)'
+custom-theme-running-dots-color='rgb(255,255,255)'
+custom-theme-shrink=true
+dash-max-icon-size=64
+disable-overview-on-startup=false
+dock-position='BOTTOM'
+extend-height=false
+height-fraction=0.90000000000000002
+hide-delay=0.20000000000000001
+hot-keys=false
+hotkeys-overlay=true
+hotkeys-show-dock=true
+intellihide=true
+intellihide-mode='FOCUS_APPLICATION_WINDOWS'
+isolate-monitors=true
+middle-click-action='launch'
+multi-monitor=true
+preferred-monitor=-2
+preferred-monitor-by-connector='DP-1'
+pressure-threshold=100.0
+require-pressure-to-show=true
+running-indicator-dominant-color=true
+running-indicator-style='DASHES'
+scroll-action='cycle-windows'
+shift-click-action='minimize'
+shift-middle-click-action='launch'
+shortcut=['<Super>q']
+shortcut-text='<Super>q'
+shortcut-timeout=2.0
+show-apps-always-in-the-edge=false
+show-delay=0.25
+show-dock-urgent-notify=true
+show-mounts=false
+show-show-apps-button=false
+show-trash=false
+transparency-mode='FIXED'
+unity-backlit-items=false
+
+[extensions/default-workspace]
+default-workspace-number=3
+
+[extensions/mediacontrols]
+extension-index=uint32 1
+extension-position='Left'
+
+[extensions/rounded-window-corners-reborn]
+blacklist=['google-chrome']
+settings-version=uint32 7
+skip-libhandy-app=true
+tweak-kitty-terminal=true
+
+[extensions/system-monitor]
+show-download=false
+show-upload=false
+
+[extensions/tilingshell]
+last-version-name-installed='16.4'
+layouts-json='[{"id":"7136588","tiles":[{"x":0,"y":0,"width":0.6421875,"height":1,"groups":[1]},{"x":0.6421875,"y":0,"width":0.3578125000000001,"height":0.6501064584811923,"groups":[3,1]},{"x":0.6421875,"y":0.6501064584811923,"width":0.3578125000000001,"height":0.3498935415188077,"groups":[3,1]}]},{"id":"398235812","tiles":[{"x":0,"y":0,"width":0.6421875,"height":0.6501064584811923,"groups":[2,1]},{"x":0,"y":0.6501064584811923,"width":1,"height":0.3498935415188077,"groups":[1]},{"x":0.6421875,"y":0,"width":0.3578125,"height":0.6501064584811923,"groups":[1,2]}]}]'
+overridden-settings='{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
+selected-layouts=[['7136588'], ['7136588'], ['7136588'], ['7136588'], ['7136588']]
+
+[extensions/user-theme]
+name='Sweet-Dark-v40'
+
+[keybindings]
+screenshot=['Print']
+screenshot-window=@as []
+show-screen-recording-ui=@as []
+show-screenshot-ui=['<Shift><Super>s']
+toggle-message-tray=@as []
+
+[weather]
+automatic-location=true
+locations=[<(uint32 2, <('Hanoi', 'VVNB', false, [(0.36681003694523912, 1.8465583486100006)], @a(dd) [])>)>]
+
+[world-clocks]
+locations=@av []

@@ -1,0 +1,9 @@
+git-lfs
+unityhub
+rider
+dotnetsdk
+nvm
+miniconda3
+jdk-openjdk
+docker
+docker-compose
