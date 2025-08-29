@@ -16,6 +16,7 @@ ln -s $dotfile/.vimrc ~/.vimrc
 ln -s $dotfile/.gitconfig ~/.gitconfig
 ln -s $dotfile/kitty ~/.config/kitty
 ln -s $dotfile/ranger ~/.config/ranger
+ln -s $dotfile/btop ~/.config/btop
 ln -s $dotfile/cava ~/.config/cava
 
 sudo systemctl enable --now sshd

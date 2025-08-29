@@ -18,3 +18,5 @@
 	autocrlf = input
 [init]
 	defaultBranch = master
+[advice]
+	diverging = false

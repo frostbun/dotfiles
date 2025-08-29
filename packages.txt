@@ -5,6 +5,7 @@ google-chrome
 discord
 unityhub
 rider
+android-studio
 visual-studio-code-bin
 kitty
 btop
@@ -22,8 +23,6 @@ mono-msbuild
 cloudflare-warp-bin
 nvm
 miniconda3
-android-sdk
-android-udev
 vlc
 gimp
 darktable
