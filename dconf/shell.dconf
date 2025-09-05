@@ -1,5 +1,4 @@
 [/]
-app-picker-layout=[{'fb13aed0-e790-4e7d-9f66-bb6553068d55': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Music.desktop': <{'position': <3>}>, 'org.gnome.Settings.desktop': <{'position': <4>}>, 'org.gnome.Totem.desktop': <{'position': <5>}>, 'org.gnome.Snapshot.desktop': <{'position': <6>}>, 'org.gnome.Characters.desktop': <{'position': <7>}>, 'Utilities': <{'position': <8>}>, 'System': <{'position': <9>}>, 'org.gnome.Calculator.desktop': <{'position': <10>}>, 'org.gnome.Calendar.desktop': <{'position': <11>}>, 'org.gnome.SimpleScan.desktop': <{'position': <12>}>, 'org.gnome.Extensions.desktop': <{'position': <13>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <14>}>, 'ranger.desktop': <{'position': <15>}>, 'btop.desktop': <{'position': <16>}>}, {'22b43f53-c918-4008-863e-4cbd4c17a14d': <{'position': <0>}>, 'qv4l2.desktop': <{'position': <1>}>, 'qvidcap.desktop': <{'position': <2>}>, 'anydesk.desktop': <{'position': <3>}>, 'vim.desktop': <{'position': <4>}>, 'asset-ripper.desktop': <{'position': <5>}>, '4df6f9a6-b48b-46a9-9843-a07c92bc8b28': <{'position': <6>}>, 'steam.desktop': <{'position': <7>}>, 'vlc.desktop': <{'position': <8>}>, 'com.cloudflare.WarpTaskbar.desktop': <{'position': <9>}>, 'cmake-gui.desktop': <{'position': <10>}>, 'ad9e9866-598f-425e-b8b1-4cff6e4b98ee': <{'position': <11>}>, 'gparted.desktop': <{'position': <12>}>, 'lstopo.desktop': <{'position': <13>}>, 'Vial.desktop': <{'position': <14>}>, 'winbox.desktop': <{'position': <15>}>, '0962d50f-eade-4dbf-a904-b5e9f1ea5a6b': <{'position': <16>}>}]
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-dock@micxgx.gmail.com', 'default-workspace@mateusrodcosta.com', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'rounded-window-corners@fxgn', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
@@ -126,7 +125,6 @@ show-screenshot-ui=['<Shift><Super>s']
 toggle-message-tray=@as []
 
 [weather]
-automatic-location=true
 locations=[<(uint32 2, <('Hanoi', 'VVNB', false, [(0.36681003694523912, 1.8465583486100006)], @a(dd) [])>)>]
 
 [world-clocks]

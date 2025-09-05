@@ -38,7 +38,7 @@ if ! pkg_installed reflector; then
 fi
 
 
-yay -Syyu --noconfirm
+yay -Syu --noconfirm
 
 
 if ! pkg_installed cloudflare-warp-bin; then
@@ -54,7 +54,6 @@ if [[ $(hostnamectl chassis) =~ "laptop" ]]; then
         echo "Laptop detected, installing tlp..."
         install tlp
         sudo systemctl enable --now tlp.service
-        sudo cp -f configs/tlp.conf /etc/tlp.conf
     fi
 fi
 
@@ -79,9 +78,8 @@ if [ -f /boot/loader/loader.conf ]; then
             --certificate /etc/kernel/secure-boot-certificate.pem \
             --private-key /etc/kernel/secure-boot-private-key.pem
         echo "secure-boot-enroll force" | sudo tee -a /boot/loader/loader.conf
+        sudo mkinitcpio -P
     fi
-
-    sudo mkinitcpio -P
 fi
 
 
@@ -170,28 +168,24 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Removing GNOME bloatwares..."
     yay -Rcns --noconfirm $(comm -12 <(pacman -Qq | sort) <(sort packages/gnome.bloatwares.txt))
 
-    echo "Copying settings..."
-    dconf load /org/gnome/shell/ < dconf/shell.dconf
-    dconf load /org/gnome/mutter/ < dconf/mutter.dconf
-
-    echo "Installing 'Open kitty here' extension..."
-    install nautilus-open-any-terminal
-    dconf write /org/gnome/nautilus/extensions/open-terminal/terminal "'kitty'"
-
-    echo "Setting keybinds..."
-    dconf load /org/gnome/desktop/wm/keybindings/ < dconf/desktop/wm/keybindings.dconf
-    dconf load /org/gnome/settings-daemon/plugins/media-keys/ < dconf/settings-daemon/plugins/media-keys.dconf
-
     echo "Installing themes..."
     link .themes ~/.themes
     link .icons ~/.icons
-    dconf load /org/gnome/desktop/interface/ < dconf/desktop/interface.dconf
-    dconf load /org/gnome/desktop/wm/preferences/ < dconf/desktop/wm/preferences.dconf
+
+    echo "Copying settings..."
+    dconf load /org/gnome/shell/ < dconf/shell.dconf
+    dconf load /org/gnome/mutter/ < dconf/mutter.dconf
+    dconf load /org/gnome/desktop/ < dconf/desktop.dconf
+    dconf load /org/gnome/settings-daemon/plugins/media-keys/ < dconf/settings-daemon/plugins/media-keys.dconf
 
     echo "Installing GNOME extensions..."
     install gnome-extensions-cli
     gext install $(cat packages/gnome.extensions.txt)
     link burn-my-windows ~/.config/burn-my-windows
+
+    echo "Installing 'Open Kitty here' extension..."
+    install nautilus-open-any-terminal
+    dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'kitty'"
 fi
 
 

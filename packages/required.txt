@@ -27,4 +27,5 @@ speedtest-cli
 gparted
 anydesk-bin
 dconf-editor
+xdg-terminal-exec
 visual-studio-code-bin
