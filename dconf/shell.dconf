@@ -1,6 +1,6 @@
 [/]
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-dock@micxgx.gmail.com', 'default-workspace@mateusrodcosta.com', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'rounded-window-corners@fxgn', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
+favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'android-studio.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
 
 [app-switcher]
