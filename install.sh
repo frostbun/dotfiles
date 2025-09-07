@@ -179,7 +179,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     dconf load /org/gnome/settings-daemon/plugins/media-keys/ < dconf/settings-daemon/plugins/media-keys.dconf
 
     echo "Installing GNOME extensions..."
-    install gnome-extensions-cli
+    install extension-manager gnome-extensions-cli
     gext install $(cat packages/gnome.extensions.txt)
     link burn-my-windows ~/.config/burn-my-windows
 

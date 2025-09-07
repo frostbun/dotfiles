@@ -1,12 +1,17 @@
 man-db
+bat
+tmux
 cmake
+meson
 google-chrome
 discord
 kitty
 btop
 ranger
 fastfetch
+cmatrix
 cava
+speedtest-cli
 libreoffice-still
 noto-fonts
 noto-fonts-cjk
@@ -23,7 +28,6 @@ gimp
 darktable
 audacity
 vial-appimage
-speedtest-cli
 gparted
 anydesk-bin
 dconf-editor
