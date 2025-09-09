@@ -176,7 +176,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     dconf load /org/gnome/shell/ < dconf/shell.dconf
     dconf load /org/gnome/mutter/ < dconf/mutter.dconf
     dconf load /org/gnome/desktop/ < dconf/desktop.dconf
-    dconf load /org/gnome/settings-daemon/plugins/media-keys/ < dconf/settings-daemon/plugins/media-keys.dconf
+    dconf load /org/gnome/settings-daemon/plugins/ < dconf/settings-daemon/plugins.dconf
 
     echo "Installing GNOME extensions..."
     install extension-manager gnome-extensions-cli

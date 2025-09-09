@@ -147,3 +147,5 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias copy='kitten clipboard'
 alias paste='kitten clipboard -g'
+
+pfetch && figlet frostbun

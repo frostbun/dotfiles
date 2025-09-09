@@ -3,7 +3,7 @@ blur-my-shell@aunetx
 burn-my-windows@schneegans.github.com
 clipboard-history@alexsaveau.dev
 cloudflare-warp-toggle@khaled.is-a.dev
-dash-to-dock@micxgx.gmail.com
+dash-to-panel@jderose9.github.com
 default-workspace@mateusrodcosta.com
 grand-theft-focus@zalckos.github.com
 mediacontrols@cliffniff.github.com
@@ -12,3 +12,4 @@ rounded-window-corners@fxgn
 system-monitor@gnome-shell-extensions.gcampax.github.com
 tilingshell@ferrarodomenico.com
 user-theme@gnome-shell-extensions.gcampax.github.com
+dash-to-dock@micxgx.gmail.com

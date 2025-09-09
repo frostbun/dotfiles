@@ -1,5 +1,6 @@
 [/]
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-dock@micxgx.gmail.com', 'default-workspace@mateusrodcosta.com', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'rounded-window-corners@fxgn', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+disabled-extensions=['dash-to-dock@micxgx.gmail.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'rounded-window-corners@fxgn', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'android-studio.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
 
@@ -13,16 +14,31 @@ settings-version=2
 brightness=0.59999999999999998
 sigma=30
 
+[extensions/blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
+
 [extensions/blur-my-shell/dash-to-dock]
-blur=true
+blur=false
 brightness=0.59999999999999998
+pipeline='pipeline_default_rounded'
 sigma=30
 static-blur=true
 style-dash-to-dock=0
 
+[extensions/blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[extensions/blur-my-shell/overview]
+pipeline='pipeline_default'
+
 [extensions/blur-my-shell/panel]
+blur=false
 brightness=0.59999999999999998
+pipeline='pipeline_default'
 sigma=30
+
+[extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
 
 [extensions/blur-my-shell/window-list]
 brightness=0.59999999999999998
@@ -43,53 +59,55 @@ topbar-preview-size=16
 window-width-percentage=20
 
 [extensions/dash-to-dock]
-animation-time=0.20000000000000001
-apply-custom-theme=false
-apply-glossy-effect=false
-autohide=true
-autohide-in-fullscreen=false
-background-color='rgb(0,0,0)'
 background-opacity=0.0
-click-action='focus-minimize-or-previews'
-custom-background-color=true
-custom-theme-customize-running-dots=false
-custom-theme-running-dots-border-color='rgb(255,255,255)'
-custom-theme-running-dots-color='rgb(255,255,255)'
 custom-theme-shrink=true
 dash-max-icon-size=64
-disable-overview-on-startup=false
 dock-position='BOTTOM'
-extend-height=false
 height-fraction=0.90000000000000002
-hide-delay=0.20000000000000001
 hot-keys=false
-hotkeys-overlay=true
-hotkeys-show-dock=true
-intellihide=true
-intellihide-mode='FOCUS_APPLICATION_WINDOWS'
 isolate-monitors=true
-middle-click-action='launch'
 multi-monitor=true
 preferred-monitor=-2
-preferred-monitor-by-connector='DP-1'
-pressure-threshold=100.0
-require-pressure-to-show=true
-running-indicator-dominant-color=true
+preferred-monitor-by-connector='eDP-1'
 running-indicator-style='DASHES'
-scroll-action='cycle-windows'
-shift-click-action='minimize'
-shift-middle-click-action='launch'
-shortcut=['<Super>q']
-shortcut-text='<Super>q'
-shortcut-timeout=2.0
-show-apps-always-in-the-edge=false
-show-delay=0.25
-show-dock-urgent-notify=true
+scroll-action='switch-workspace'
 show-mounts=false
 show-show-apps-button=false
 show-trash=false
 transparency-mode='FIXED'
-unity-backlit-items=false
+
+[extensions/dash-to-panel]
+animate-appicon-hover=true
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+appicon-margin=4
+appicon-padding=8
+context-menu-entries='[]'
+dot-color-dominant=true
+dot-color-override=false
+dot-position='BOTTOM'
+dot-style-focused='SEGMENTED'
+dot-style-unfocused='DASHES'
+focus-highlight-dominant=true
+global-border-radius=5
+hotkeys-overlay-combo='TEMPORARILY'
+intellihide=true
+intellihide-hide-from-windows=true
+isolate-monitors=true
+isolate-workspaces=true
+overview-click-to-exit=true
+panel-anchors='{"BOE-0x00000000":"MIDDLE"}'
+panel-element-positions='{"BOE-0x00000000":[{"element":"dateMenu","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedBR"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"showAppsButton","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+panel-side-margins=4
+panel-side-padding=4
+panel-sizes='{"BOE-0x00000000":64}'
+panel-top-bottom-margins=4
+panel-top-bottom-padding=4
+prefs-opened=true
+primary-monitor='BOE-0x00000000'
+taskbar-locked=true
+trans-panel-opacity=0.90000000000000002
+trans-use-custom-opacity=true
+window-preview-title-position='TOP'
 
 [extensions/default-workspace]
 default-workspace-number=3

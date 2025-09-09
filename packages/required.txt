@@ -9,7 +9,8 @@ kitty
 btop
 ranger
 fastfetch
-cmatrix
+pfetch
+figlet
 cava
 speedtest-cli
 libreoffice-still
