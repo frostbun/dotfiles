@@ -1,6 +1,6 @@
 [/]
-disabled-extensions=['dash-to-dock@micxgx.gmail.com']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'rounded-window-corners@fxgn', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'compiz-windows-effect@hermes83.github.com', 'CoverflowAltTab@palatis.blogspot.com', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'desktop-cube@schneegans.github.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'rounded-window-corners@fxgn', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'android-studio.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
 
@@ -58,6 +58,13 @@ toggle-private-mode=@as []
 topbar-preview-size=16
 window-width-percentage=20
 
+[extensions/com/github/hermes83/compiz-windows-effect]
+resize-effect=true
+
+[extensions/coverflowalttab]
+switcher-background-color=(0.77254901960784317, 0.054901960784313725, 0.82352941176470584)
+switcher-looping-method='Carousel'
+
 [extensions/dash-to-dock]
 background-opacity=0.0
 custom-theme-shrink=true
@@ -68,7 +75,7 @@ hot-keys=false
 isolate-monitors=true
 multi-monitor=true
 preferred-monitor=-2
-preferred-monitor-by-connector='eDP-1'
+preferred-monitor-by-connector='DP-1'
 running-indicator-style='DASHES'
 scroll-action='switch-workspace'
 show-mounts=false
@@ -87,25 +94,27 @@ dot-color-override=false
 dot-position='BOTTOM'
 dot-style-focused='SEGMENTED'
 dot-style-unfocused='DASHES'
+extension-version=68
 focus-highlight-dominant=true
 global-border-radius=5
 hotkeys-overlay-combo='TEMPORARILY'
 intellihide=true
-intellihide-hide-from-windows=true
 isolate-monitors=true
 isolate-workspaces=true
+multi-monitors=true
 overview-click-to-exit=true
-panel-anchors='{"BOE-0x00000000":"MIDDLE"}'
-panel-element-positions='{"BOE-0x00000000":[{"element":"dateMenu","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedBR"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"showAppsButton","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+panel-anchors='{"BOE-0x00000000":"MIDDLE","VSC-X972420G1187":"MIDDLE","RTK-8R33926O00QS":"MIDDLE"}'
+panel-element-positions='{"BOE-0x00000000":[{"element":"dateMenu","visible":true,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"showAppsButton","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}],"VSC-X972420G1187":[{"element":"dateMenu","visible":true,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"showAppsButton","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}],"RTK-8R33926O00QS":[{"element":"dateMenu","visible":true,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"showAppsButton","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+panel-lengths='{}'
+panel-positions='{}'
 panel-side-margins=4
 panel-side-padding=4
-panel-sizes='{"BOE-0x00000000":64}'
+panel-sizes='{"BOE-0x00000000":64,"VSC-X972420G1187":64}'
 panel-top-bottom-margins=4
 panel-top-bottom-padding=4
-prefs-opened=true
-primary-monitor='BOE-0x00000000'
-taskbar-locked=true
-trans-panel-opacity=0.90000000000000002
+prefs-opened=false
+primary-monitor='VSC-X972420G1187'
+trans-panel-opacity=0.80000000000000004
 trans-use-custom-opacity=true
 window-preview-title-position='TOP'
 
@@ -116,11 +125,13 @@ default-workspace-number=3
 extension-index=uint32 1
 extension-position='Left'
 
+[extensions/ncom/github/hermes83/compiz-alike-magic-lamp-effect]
+duration=200.0
+
 [extensions/rounded-window-corners-reborn]
 blacklist=['google-chrome']
 settings-version=uint32 7
 skip-libhandy-app=true
-tweak-kitty-terminal=true
 
 [extensions/system-monitor]
 show-download=false

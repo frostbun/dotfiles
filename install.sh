@@ -1,22 +1,6 @@
 #!/usr/bin/env sh
 
-dotfiles=$(pwd)
-
-alias install="yay -S --needed --noconfirm"
-
-pkg_installed() {
-    if pacman -Q $1 &>/dev/null; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-
-link() {
-    rm -rf $2
-    ln -s $dotfiles/configs/$1 $2
-}
+source ./common.sh
 
 
 if ! pkg_installed yay; then
@@ -62,22 +46,27 @@ if [ -f /boot/loader/loader.conf ]; then
     echo "Configuring systemd-boot..."
     echo "timeout 0" | sudo tee /boot/loader/loader.conf
 
-    read -p "Install secure boot? [y/N]: " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
+    if prompt "Install secure boot"; then
+
         echo "Installing secure boot..."
         install systemd-ukify
+
         sudo cp -f configs/uki.conf /etc/kernel/uki.conf
+
         sudo ukify genkey --config /etc/kernel/uki.conf
+
         sudo /usr/lib/systemd/systemd-sbsign sign \
             --private-key /etc/kernel/secure-boot-private-key.pem \
             --certificate /etc/kernel/secure-boot-certificate.pem \
             --output /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed \
             /usr/lib/systemd/boot/efi/systemd-bootx64.efi
+
         sudo bootctl install --secure-boot-auto-enroll yes \
             --certificate /etc/kernel/secure-boot-certificate.pem \
             --private-key /etc/kernel/secure-boot-private-key.pem
+
         echo "secure-boot-enroll force" | sudo tee -a /boot/loader/loader.conf
+
         sudo mkinitcpio -P
     fi
 fi
@@ -120,9 +109,7 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 vim +PluginInstall +qall
-read -p "Install youcompleteme? [y/N]: " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
+if prompt "Install youcompleteme"; then
     ~/.vim/bundle/youcompleteme/install.py
 fi
 
@@ -132,13 +119,19 @@ link .gitconfig ~/.gitconfig
 link fcitx5 ~/.config/fcitx5
 link kitty ~/.config/kitty
 link ranger ~/.config/ranger
+link fastfetch ~/.config/fastfetch
 link btop ~/.config/btop
 link cava ~/.config/cava
 
 
-read -p "Install dev packages? [y/N]: " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
+if prompt "Install toy packages"; then
+
+    echo "Installing toy packages..."
+    install - < packages/toys.txt
+fi
+
+
+if prompt "Install dev packages"; then
 
     echo "Installing dev packages..."
     install - < packages/dev.txt
@@ -153,39 +146,14 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     mkdir -p ~/.local/share/unity3d
 
-    read -p "Install youcompleteme? [y/N]: " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
+    if prompt "Install youcompleteme"; then
         ~/.vim/bundle/youcompleteme/install.py --all
     fi
 fi
 
 
-read -p "Install GNOME packages? [y/N]: " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-
-    echo "Removing GNOME bloatwares..."
-    yay -Rcns --noconfirm $(comm -12 <(pacman -Qq | sort) <(sort packages/gnome.bloatwares.txt))
-
-    echo "Installing themes..."
-    link .themes ~/.themes
-    link .icons ~/.icons
-
-    echo "Copying settings..."
-    dconf load /org/gnome/shell/ < dconf/shell.dconf
-    dconf load /org/gnome/mutter/ < dconf/mutter.dconf
-    dconf load /org/gnome/desktop/ < dconf/desktop.dconf
-    dconf load /org/gnome/settings-daemon/plugins/ < dconf/settings-daemon/plugins.dconf
-
-    echo "Installing GNOME extensions..."
-    install extension-manager gnome-extensions-cli
-    gext install $(cat packages/gnome.extensions.txt)
-    link burn-my-windows ~/.config/burn-my-windows
-
-    echo "Installing 'Open Kitty here' extension..."
-    install nautilus-open-any-terminal
-    dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'kitty'"
+if prompt "Install GNOME packages"; then
+    ./install.gnome.sh
 fi
 
 
@@ -194,8 +162,6 @@ yay -Rcns --noconfirm $(yay -Qdtq)
 yay -Scc --noconfirm
 
 
-read -p "Reboot now? [y/N]: " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
+if prompt "Reboot now"; then
     reboot
 fi

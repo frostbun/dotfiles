@@ -1,3 +1,5 @@
+fastfetch && figlet $(whoami) | lolcat
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -114,7 +116,6 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # The following lines were added by compinstall
-
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
@@ -147,5 +148,3 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias copy='kitten clipboard'
 alias paste='kitten clipboard -g'
-
-pfetch && figlet frostbun

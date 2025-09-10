@@ -1,7 +1,6 @@
 [/]
 dynamic-workspaces=false
 edge-tiling=false
-workspaces-only-on-primary=false
 
 [keybindings]
 toggle-tiled-left=@as []
@@ -9,3 +8,6 @@ toggle-tiled-right=@as []
 
 [wayland]
 xwayland-disable-extension=['Xtest']
+
+[wayland/keybindings]
+restore-shortcuts=@as []
