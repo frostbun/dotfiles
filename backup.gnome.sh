@@ -7,4 +7,4 @@ dconf dump /org/gnome/desktop/ > dconf/desktop.dconf
 dconf dump /org/gnome/settings-daemon/plugins/ > dconf/settings-daemon/plugins.dconf
 
 echo "Backing up GNOME extensions..."
-gext ls -a | awk -F'[()]' '{print $2}' > packages/gnome.extensions.txt
+gext ls -a | awk -F'[()]' '{print $2}' | sort > packages/gnome.extensions.txt
