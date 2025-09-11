@@ -1,4 +1,9 @@
-fastfetch && figlet $(whoami) | lolcat
+fastfetch
+
+case $((RANDOM % 2)) in
+    0) figlet "$(whoami)" 2>/dev/null | lolcat 2>/dev/null ;;
+    1) cowsay "$(fortune -s 2>/dev/null)" 2>/dev/null | lolcat 2>/dev/null ;;
+esac
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
