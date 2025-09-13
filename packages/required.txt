@@ -1,5 +1,8 @@
 man-db
 bat
+fzf
+fd
+ripgrep
 tmux
 cmake
 meson

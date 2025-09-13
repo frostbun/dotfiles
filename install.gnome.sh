@@ -5,10 +5,6 @@ source ./common.sh
 echo "Removing GNOME bloatwares..."
 yay -Rcns --noconfirm $(comm -12 <(pacman -Qq | sort) <(sort packages/gnome.bloatwares.txt))
 
-echo "Installing themes..."
-link .themes ~/.themes
-link .icons ~/.icons
-
 echo "Installing GNOME extensions..."
 install extension-manager gnome-extensions-cli
 sudo rm -f /usr/share/applications/org.gnome.Extensions.desktop

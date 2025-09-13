@@ -152,6 +152,11 @@ if prompt "Install dev packages"; then
 fi
 
 
+echo "Installing themes..."
+link .themes ~/.themes
+link .icons ~/.icons
+
+
 if prompt "Install GNOME packages"; then
     ./install.gnome.sh
 fi

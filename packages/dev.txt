@@ -1,4 +1,5 @@
 git-lfs
+lazygit
 unityhub
 rider
 dotnetsdk
