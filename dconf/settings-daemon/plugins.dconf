@@ -6,7 +6,7 @@ night-light-schedule-to=7.0
 night-light-temperature=uint32 4700
 
 [media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 help=@as []
 home=['<Super>e']
 magnifier=@as []
@@ -28,6 +28,11 @@ name='btop'
 binding=''
 command='kitty -e ranger'
 name='ranger'
+
+[media-keys/custom-keybindings/custom3]
+binding='<Super>t'
+command='google-chrome-stable'
+name='google-chrome-stable'
 
 [power]
 sleep-inactive-ac-type='nothing'

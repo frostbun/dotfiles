@@ -145,7 +145,6 @@ bindkey -e
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
 
-export GPG_TTY=$(tty)
 export PATH="$HOME/.local/bin:$PATH"
 
 alias rm='rm -I'
