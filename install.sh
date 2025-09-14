@@ -115,6 +115,8 @@ fi
 
 
 echo "Creating symlinks for dotfiles..."
+link .themes ~/.themes
+link .icons ~/.icons
 link .gitconfig ~/.gitconfig
 link fcitx5 ~/.config/fcitx5
 link kitty ~/.config/kitty
@@ -125,40 +127,23 @@ link cava ~/.config/cava
 
 
 if prompt "Install toy packages"; then
-
     echo "Installing toy packages..."
     install - < packages/toys.txt
 fi
 
 
 if prompt "Install dev packages"; then
-
-    echo "Installing dev packages..."
-    install - < packages/dev.txt
-
-    [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
-    [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
-
-    nvm install --lts
-
-    sudo systemctl enable --now sshd
-    sudo systemctl enable --now docker
-
-    mkdir -p ~/.local/share/unity3d
-
-    if prompt "Install youcompleteme"; then
-        ~/.vim/bundle/youcompleteme/install.py --all
-    fi
+    ./install.dev.sh
 fi
-
-
-echo "Installing themes..."
-link .themes ~/.themes
-link .icons ~/.icons
 
 
 if prompt "Install GNOME packages"; then
     ./install.gnome.sh
+fi
+
+
+if prompt "Install Hyprland packages"; then
+    ./install.hyprland.sh
 fi
 
 

@@ -1,11 +1,17 @@
-[color]
+[global-shortcuts]
+applications=['com.google.Chrome']
+
+[global-shortcuts/com.google.Chrome]
+shortcuts=[('7A75EF044CD103D834CFBB2343B3C163-enter-picker-mode', {'description': <'Create a custom filter'>}), ('7A75EF044CD103D834CFBB2343B3C163-enter-zapper-mode', {'description': <'Remove an element'>})]
+
+[plugins/color]
 night-light-enabled=true
 night-light-schedule-automatic=false
 night-light-schedule-from=19.0
 night-light-schedule-to=7.0
 night-light-temperature=uint32 4700
 
-[media-keys]
+[plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 help=@as []
 home=['<Super>e']
@@ -14,25 +20,25 @@ magnifier-zoom-in=@as []
 magnifier-zoom-out=@as []
 screenreader=@as []
 
-[media-keys/custom-keybindings/custom0]
+[plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>r'
 command='kitty'
 name='kitty'
 
-[media-keys/custom-keybindings/custom1]
+[plugins/media-keys/custom-keybindings/custom1]
 binding='<Shift><Control>Escape'
 command='kitty -e btop'
 name='btop'
 
-[media-keys/custom-keybindings/custom2]
+[plugins/media-keys/custom-keybindings/custom2]
 binding=''
 command='kitty -e ranger'
 name='ranger'
 
-[media-keys/custom-keybindings/custom3]
+[plugins/media-keys/custom-keybindings/custom3]
 binding='<Super>t'
 command='google-chrome-stable'
 name='google-chrome-stable'
 
-[power]
+[plugins/power]
 sleep-inactive-ac-type='nothing'

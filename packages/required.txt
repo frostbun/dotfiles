@@ -1,5 +1,6 @@
 man-db
 bat
+bat-extras
 fzf
 fd
 ripgrep
@@ -17,7 +18,6 @@ speedtest-cli
 libreoffice-still
 noto-fonts
 noto-fonts-cjk
-ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 fcitx5
 fcitx5-qt
