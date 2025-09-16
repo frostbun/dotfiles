@@ -115,15 +115,16 @@ fi
 
 
 echo "Creating symlinks for dotfiles..."
+link .gitconfig ~/.gitconfig
 link .themes ~/.themes
 link .icons ~/.icons
-link .gitconfig ~/.gitconfig
+link bat ~/.config/bat
+link btop ~/.config/btop
+link cava ~/.config/cava
+link fastfetch ~/.config/fastfetch
 link fcitx5 ~/.config/fcitx5
 link kitty ~/.config/kitty
 link ranger ~/.config/ranger
-link fastfetch ~/.config/fastfetch
-link btop ~/.config/btop
-link cava ~/.config/cava
 
 
 if prompt "Install toy packages"; then
