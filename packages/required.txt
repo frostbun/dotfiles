@@ -1,12 +1,13 @@
+cmake
+meson
 man-db
+tmux
 bat
 bat-extras
 fzf
 fd
 ripgrep
-tmux
-cmake
-meson
+trash-cli
 google-chrome
 discord
 kitty
