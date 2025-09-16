@@ -4,7 +4,9 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
-let g:airline_theme='deus'
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+let g:airline_theme = 'tokyonight'
 let g:airline_powerline_fonts = 1
 
 call vundle#begin()
@@ -14,8 +16,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
+Plugin 'ghifarit53/tokyonight-vim'
 
 call vundle#end()
+
+set termguicolors
+
+colorscheme tokyonight
 
 filetype plugin indent on
 

@@ -9,4 +9,4 @@ install - < packages/hyprland.txt
 
 link hypr ~/.config/hypr
 link waybar ~/.config/waybar
-link rofi ~/.config/rofi
+link wofi ~/.config/wofi

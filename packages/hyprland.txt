@@ -1,3 +1,2 @@
 hyprpaper
 waybar
-rofi
