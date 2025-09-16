@@ -89,6 +89,7 @@ transparency-mode='FIXED'
 [extensions/dash-to-panel]
 animate-appicon-hover=true
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+animate-appicon-hover-animation-type='RIPPLE'
 appicon-margin=4
 appicon-padding=8
 context-menu-entries='[]'
@@ -117,6 +118,7 @@ panel-top-bottom-margins=4
 panel-top-bottom-padding=4
 prefs-opened=false
 primary-monitor='VSC-X972420G1187'
+taskbar-locked=true
 trans-panel-opacity=0.80000000000000004
 trans-use-custom-opacity=true
 window-preview-title-position='TOP'
@@ -137,9 +139,9 @@ show-upload=false
 
 [extensions/tilingshell]
 last-version-name-installed='16.4'
-layouts-json='[{"id":"7136588","tiles":[{"x":0,"y":0,"width":0.6421875,"height":1,"groups":[1]},{"x":0.6421875,"y":0,"width":0.3578125000000001,"height":0.6501064584811923,"groups":[3,1]},{"x":0.6421875,"y":0.6501064584811923,"width":0.3578125000000001,"height":0.3498935415188077,"groups":[3,1]}]},{"id":"398235812","tiles":[{"x":0,"y":0,"width":0.6421875,"height":0.6501064584811923,"groups":[2,1]},{"x":0,"y":0.6501064584811923,"width":1,"height":0.3498935415188077,"groups":[1]},{"x":0.6421875,"y":0,"width":0.3578125,"height":0.6501064584811923,"groups":[1,2]}]}]'
+layouts-json='[{"id":"0","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[3,1]},{"x":0.67,"y":0.67,"width":0.33,"height":0.33,"groups":[3,1]}]},{"id":"1","tiles":[{"x":0,"y":0,"width":0.67,"height":0.67,"groups":[2,1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[1,2]}]},{"id":"2","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":1,"groups":[1]}]},{"id":"3","tiles":[{"x":0,"y":0,"width":1,"height":0.67,"groups":[1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]}]}]'
 overridden-settings='{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
-selected-layouts=[['7136588'], ['7136588'], ['7136588'], ['7136588'], ['7136588']]
+selected-layouts=[['0'], ['0'], ['2'], ['0'], ['3']]
 
 [extensions/user-theme]
 name='Sweet-Dark-v40'
