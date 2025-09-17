@@ -1,6 +1,6 @@
 [/]
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'compiz-windows-effect@hermes83.github.com', 'CoverflowAltTab@palatis.blogspot.com', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'desktop-cube@schneegans.github.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'compiz-windows-effect@hermes83.github.com', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'android-studio.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
 
@@ -60,10 +60,6 @@ window-width-percentage=20
 
 [extensions/com/github/hermes83/compiz-windows-effect]
 resize-effect=true
-
-[extensions/coverflowalttab]
-switcher-background-color=(0.77254901960784317, 0.054901960784313725, 0.82352941176470584)
-switcher-looping-method='Carousel'
 
 [extensions/dash-to-dock]
 background-opacity=0.0
