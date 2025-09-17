@@ -4,11 +4,6 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
-let g:tokyonight_style = 'night'
-let g:tokyonight_enable_italic = 1
-let g:airline_theme = 'tokyonight'
-let g:airline_powerline_fonts = 1
-
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -19,6 +14,11 @@ Plugin 'valloric/youcompleteme'
 Plugin 'ghifarit53/tokyonight-vim'
 
 call vundle#end()
+
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+let g:airline_theme = 'tokyonight'
+let g:airline_powerline_fonts = 1
 
 set termguicolors
 
