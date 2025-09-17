@@ -1,14 +1,11 @@
 [/]
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'compiz-windows-effect@hermes83.github.com', 'CoverflowAltTab@palatis.blogspot.com', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'desktop-cube@schneegans.github.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'compiz-windows-effect@hermes83.github.com', 'CoverflowAltTab@palatis.blogspot.com', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'desktop-cube@schneegans.github.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'android-studio.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
 
 [app-switcher]
 current-workspace-only=true
-
-[extensions/auto-move-windows]
-application-list=['rider.desktop:3', 'discord.desktop:4', 'code.desktop:5']
 
 [extensions/blur-my-shell]
 settings-version=2
