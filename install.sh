@@ -116,7 +116,6 @@ fi
 
 echo "Creating symlinks for dotfiles..."
 link .gitconfig ~/.gitconfig
-link .themes ~/.themes
 link .icons ~/.icons
 link bat ~/.config/bat
 link btop ~/.config/btop

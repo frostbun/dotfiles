@@ -14,4 +14,3 @@ mediacontrols@cliffniff.github.com
 middleclickclose@paolo.tranquilli.gmail.com
 system-monitor@gnome-shell-extensions.gcampax.github.com
 tilingshell@ferrarodomenico.com
-user-theme@gnome-shell-extensions.gcampax.github.com

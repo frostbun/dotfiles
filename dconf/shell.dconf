@@ -136,9 +136,6 @@ layouts-json='[{"id":"0","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":
 overridden-settings='{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
 selected-layouts=[['0'], ['0'], ['2'], ['0'], ['3']]
 
-[extensions/user-theme]
-name='Sweet-Dark-v40'
-
 [keybindings]
 open-new-window-application-1=@as []
 open-new-window-application-2=@as []

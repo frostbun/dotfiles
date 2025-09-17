@@ -1,8 +1,9 @@
 fastfetch
 
-case $((RANDOM % 2)) in
-    0) figlet "$(whoami)" 2>/dev/null | lolcat 2>/dev/null ;;
-    1) cowsay "$(fortune -s 2>/dev/null)" 2>/dev/null | lolcat 2>/dev/null ;;
+case $((RANDOM % 3)) in
+    0) figlet "$(whoami)" | lolcat ;;
+    1) cowsay "$(fortune -s)" | lolcat ;;
+    2) cowthink "$(fortune -s)" | lolcat ;;
 esac
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.

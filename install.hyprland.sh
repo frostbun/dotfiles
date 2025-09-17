@@ -7,6 +7,7 @@ echo "Installing Hyprland packages..."
 install - < packages/hyprland.txt
 
 
+echo "Creating symlinks for dotfiles..."
 link hypr ~/.config/hypr
 link waybar ~/.config/waybar
 link wofi ~/.config/wofi
