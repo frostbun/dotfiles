@@ -95,7 +95,6 @@ extension-version=70
 focus-highlight-dominant=true
 global-border-radius=5
 hotkeys-overlay-combo='TEMPORARILY'
-intellihide=false
 isolate-monitors=true
 isolate-workspaces=true
 multi-monitors=true
