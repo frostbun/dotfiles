@@ -2,7 +2,7 @@ git-lfs
 lazygit
 unityhub
 rider
-dotnetsdk
+dotnet-sdk
 nvm
 miniconda3
 jdk-openjdk
