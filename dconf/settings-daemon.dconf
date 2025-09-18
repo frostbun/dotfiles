@@ -1,9 +1,3 @@
-[global-shortcuts]
-applications=['com.google.Chrome']
-
-[global-shortcuts/com.google.Chrome]
-shortcuts=[('47B82F9962FB97170AB7C7F26BE3CC95-enter-picker-mode', {'description': <'Create a custom filter'>}), ('47B82F9962FB97170AB7C7F26BE3CC95-enter-zapper-mode', {'description': <'Remove an element'>})]
-
 [plugins/color]
 night-light-enabled=true
 night-light-schedule-automatic=false
