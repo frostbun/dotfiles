@@ -7,6 +7,5 @@ nvm
 miniconda3
 jdk-openjdk
 android-tools
-waydroid
 docker
 docker-compose

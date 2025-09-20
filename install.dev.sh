@@ -7,9 +7,6 @@ echo "Installing dev packages..."
 install - < packages/dev.txt
 
 
-waydroid init
-
-
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
