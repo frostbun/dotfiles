@@ -8,13 +8,6 @@ install waydroid
 sudo waydroid init 
 
 
-if prompt "Configure software rendering"; then
-    echo "ro.hardware.gralloc=default" | sudo tee -a /var/lib/waydroid/waydroid.cfg
-    echo "ro.hardware.egl=swiftshader" | sudo tee -a /var/lib/waydroid/waydroid.cfg
-    waydroid upgrade --offline
-fi
-
-
 echo "Configuring Waydroid package forwarding..."
 
 sudo sysctl net.ipv4.ip_forward=1
@@ -29,18 +22,20 @@ sudo ufw enable
 
 
 echo "Installing Waydroid ARM translation libraries..."
-
 git clone --depth=1 https://github.com/casualsnek/waydroid_script
 cd waydroid_script
 python3 -m venv venv
 venv/bin/pip install -r requirements.txt
-
 sudo venv/bin/python3 main.py install libhoudini
-sudo venv/bin/python3 main.py install gapps
 
-read -p "Open Waydroid & press [Enter] to continue..."
-sudo python3 main.py google
-echo "Follow the instructions & clear Google Play Services data after 15 mins"
+
+if prompt "Install gapps"; then
+    sudo venv/bin/python3 main.py install gapps
+    read -p "Open Waydroid & press [Enter] to continue..."
+    sudo venv/bin/python3 main.py certified
+    echo "Follow the instructions & clear Google Play Services data after 15 mins"
+fi
+
 
 cd ..
-rm -rf waydroid_script
+sudo rm -rf waydroid_script
