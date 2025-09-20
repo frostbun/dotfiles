@@ -32,7 +32,6 @@ darktable
 audacity
 vial-appimage
 gparted
-anydesk-bin
 dconf-editor
 xdg-terminal-exec
 visual-studio-code-bin
