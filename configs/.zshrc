@@ -1,8 +1,8 @@
 quote() {
   case $((RANDOM % 3)) in
     0) figlet "$(whoami)" | lolcat ;;
-    1) cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1) "$(fortune -s)" | lolcat ;;
-    2) cowthink -f $(ls /usr/share/cowsay/cows | shuf -n 1) "$(fortune -s)" | lolcat ;;
+    1) cowsay -f $(ls /usr/share/cowsay/cows | shuf -n1 --random-source=/dev/urandom) "$(fortune -s)" | lolcat ;;
+    2) cowthink -f $(ls /usr/share/cowsay/cows | shuf -n1 --random-source=/dev/urandom) "$(fortune -s)" | lolcat ;;
   esac
 }
 

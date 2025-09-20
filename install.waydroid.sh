@@ -5,7 +5,7 @@ source ./common.sh
 
 echo "Installing Waydroid..."
 install waydroid
-waydroid init 
+sudo waydroid init 
 
 
 if prompt "Configure software rendering"; then
