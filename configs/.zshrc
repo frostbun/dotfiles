@@ -1,10 +1,13 @@
-fastfetch
-
-case $((RANDOM % 3)) in
+quote() {
+  case $((RANDOM % 3)) in
     0) figlet "$(whoami)" | lolcat ;;
-    1) cowsay "$(fortune -s)" | lolcat ;;
-    2) cowthink "$(fortune -s)" | lolcat ;;
-esac
+    1) cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1) "$(fortune -s)" | lolcat ;;
+    2) cowthink -f $(ls /usr/share/cowsay/cows | shuf -n 1) "$(fortune -s)" | lolcat ;;
+  esac
+}
+
+fastfetch
+quote 2>/dev/null
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
