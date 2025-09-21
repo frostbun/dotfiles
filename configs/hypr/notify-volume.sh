@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+info=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+
+volume=$(echo $info | awk '{print int($2*100)}')
+
+if echo "$info" | grep -q MUTED; then
+    status="Muted"
+    icon="$HOME/.icons/candy-icons/status/scalable/audio-volume-muted-symbolic.svg"
+else
+    status="$volume%"
+    if [ "$volume" -gt 100 ]; then
+        icon="$HOME/.icons/candy-icons/status/scalable/audio-volume-overamplified-symbolic.svg"
+    elif [ "$volume" -gt 70 ]; then
+        icon="$HOME/.icons/candy-icons/status/scalable/audio-volume-high-symbolic.svg"
+    elif [ "$volume" -gt 30 ]; then
+        icon="$HOME/.icons/candy-icons/status/scalable/audio-volume-medium-symbolic.svg"
+    else
+        icon="$HOME/.icons/candy-icons/status/scalable/audio-volume-low-symbolic.svg"
+    fi
+fi
+
+notify-send -a "notify-volume" -r 50 "Volume: $status" -h int:value:$volume -i $icon

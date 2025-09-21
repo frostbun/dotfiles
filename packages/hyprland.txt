@@ -1,0 +1,10 @@
+hyprpaper
+hypridle
+hyprlock
+hyprpicker
+wl-clipboard
+cliphist
+waybar
+pavucontrol
+blueman
+swappy
