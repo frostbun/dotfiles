@@ -29,6 +29,7 @@ if ! pkg_installed cloudflare-warp-bin; then
     echo "Installing Cloudflare Warp..."
     install cloudflare-warp-bin
     sudo systemctl enable --now warp-svc
+    sleep 5
     warp-cli registration new
 fi
 
