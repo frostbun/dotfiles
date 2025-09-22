@@ -248,7 +248,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = wofi --dmenu dunst:
+    dmenu = wofi -d dunst:
 
     # Browser for opening urls in context menu.
     browser = xdg-open

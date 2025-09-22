@@ -62,6 +62,7 @@ window#waybar {
     background: @selection;
 }
 
+#custom-dnd,
 #custom-player,
 #tray,
 #pulseaudio,
@@ -72,6 +73,7 @@ window#waybar {
     padding: 0 4px;
 }
 
+#custom-dnd:hover,
 #clock:hover,
 #custom-player:hover,
 #pulseaudio:hover,
