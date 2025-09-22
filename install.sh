@@ -118,6 +118,7 @@ fi
 echo "Creating symlinks for dotfiles..."
 link .gitconfig ~/.gitconfig
 link .icons ~/.icons
+link lazygit ~/.config/lazygit
 link bat ~/.config/bat
 link btop ~/.config/btop
 link cava ~/.config/cava

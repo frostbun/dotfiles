@@ -8,30 +8,34 @@
   "margin-bottom": 0,
   "modules-left": [
     "hyprland/workspaces",
+    "custom/player",
     "hyprland/window"
   ],
   "modules-center": [
-    "custom/dnd",
     "clock"
   ],
   "modules-right": [
-    "custom/player",
-    "tray",
+    "custom/dnd",
     "pulseaudio",
+    "bluetooth",
     "network",
     "custom/vpn",
     "battery",
     "cpu",
     "memory"
   ],
+  "custom/player": {
+    "interval": 1,
+    "format": "{}",
+    "exec": "echo \"$([ $(playerctl status) = Playing ] && echo  || echo ) $(playerctl metadata --format '{{title}} - {{artist}}')\"",
+    "exec-if": "[ $(playerctl status) != Stopped ]",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "max-length": 32
+  },
   "hyprland/window": {
     "max-length": 64
-  },
-  "custom/dnd": {
-    "interval": 60,
-    "format": "{}",
-    "exec": "[ $(dunstctl is-paused) = false ] && echo ' ' || echo ' '",
-    "on-click": "dunstctl set-paused toggle"
   },
   "clock": {
     "format": "{:%a %b %d %I:%M:%S %p}",
@@ -40,27 +44,21 @@
     "on-click": "while dunstctl history-pop; do :; done",
     "on-click-right": "dunstctl close-all && dunstctl history-clear"
   },
-  "custom/player": {
+  "custom/dnd": {
     "interval": 1,
     "format": "{}",
-    "exec": "echo \"$([ $(playerctl status) = Playing ] && echo  || echo ) $(playerctl metadata --format '{{title}} - {{artist}}')\"",
-    "exec-if": "[ $(playerctl status) != Stopped ]",
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "on-click-middle": "playerctl previous",
-    "max-length": 32
+    "exec": "echo \"$([ $(dunstctl is-paused) = false ] && echo \" \" || echo \" \")$(($(dunstctl count displayed)+$(dunstctl count history)+$(dunstctl count waiting)))\"",
+    "on-click": "dunstctl set-paused toggle"
   },
   "tray": {
     "icon-size": 16,
     "spacing": 8
   },
   "pulseaudio": {
-    "scroll-step": 5,
-    "max-volume" : 150,
     "format": "{icon}{volume}% {format_source}",
     "format-muted": "  {format_source}",
-    "format-bluetooth": "{icon}{volume}% {format_source}",
-    "format-bluetooth-muted": "  {format_source}",
+    "format-bluetooth": "{icon}{volume}% {format_source}",
+    "format-bluetooth-muted": "  {format_source}",
     "format-source": "{volume}%",
     "format-source-muted": " ",
     "format-icons": {
@@ -70,7 +68,22 @@
         " "
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click-right": "pavucontrol",
+    "on-click": "~/.config/hypr/volume/mute.sh",
+    "on-scroll-up": "~/.config/hypr/volume/raise.sh",
+    "on-scroll-down": "~/.config/hypr/volume/lower.sh",
+    "on-click-middle": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
+  },
+  "bluetooth": {
+    "format": "{status}",
+    "format-connected": "{device_alias}",
+    "format-connected-battery": "{device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\t{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\t{num_connections} connected\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click-right": "blueman-manager",
+    "on-click": "bluetoothctl show | grep -q 'PowerState: off' && bluetoothctl power on || bluetoothctl power off"
   },
   "network": {
     "format-ethernet": " Connected",

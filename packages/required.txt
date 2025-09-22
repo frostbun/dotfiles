@@ -1,6 +1,7 @@
 cmake
 meson
 man-db
+lazygit
 tmux
 bat
 bat-extras

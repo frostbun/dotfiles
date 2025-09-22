@@ -24,7 +24,3 @@ mkdir -p ~/.local/share/unity3d
 if prompt "Install youcompleteme"; then
     ~/.vim/bundle/youcompleteme/install.py --all
 fi
-
-
-echo "Creating symlinks for dotfiles..."
-link lazygit ~/.config/lazygit

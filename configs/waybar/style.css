@@ -62,10 +62,11 @@ window#waybar {
     background: @selection;
 }
 
-#custom-dnd,
 #custom-player,
+#custom-dnd,
 #tray,
 #pulseaudio,
+#bluetooth,
 #battery {
     border: 2px solid @purple;
     border-radius: 4px;
@@ -73,12 +74,13 @@ window#waybar {
     padding: 0 4px;
 }
 
-#custom-dnd:hover,
-#clock:hover,
 #custom-player:hover,
+#clock:hover,
+#custom-dnd:hover,
 #pulseaudio:hover,
-#custom-vpn:hover,
+#bluetooth:hover,
 #network:hover,
+#custom-vpn:hover,
 #battery:hover,
 #cpu:hover,
 #memory:hover {
