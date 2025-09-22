@@ -20,4 +20,7 @@ else
     fi
 fi
 
-notify-send -a "notify-volume" -r 50 "Volume: $status" -h int:value:$volume -i $icon
+name=$(wpctl inspect @DEFAULT_SINK@ | grep node.description | awk -F'"' '{print $2}')
+[ ${#name} -gt 16 ] && name="${name:0:13}..." 
+
+notify-send -a "notify-volume" -r 50 "Volume: $status" "$name" -h int:value:$volume -i $icon
