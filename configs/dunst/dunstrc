@@ -342,14 +342,14 @@
     foreground = "#6272a4"
     highlight = "#8be9fd"
     frame_color = "#bd93f9"
-    timeout = 10
+    timeout = 5
 
 [urgency_normal]
     background = "#282a36"
     foreground = "#bd93f9"
     highlight = "#8be9fd"
     frame_color = "#bd93f9"
-    timeout = 10
+    timeout = 5
     override_pause_level = 30
 
 [urgency_critical]
