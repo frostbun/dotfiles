@@ -2,9 +2,8 @@ hyprpaper
 hypridle
 hyprlock
 hyprpicker
-wl-clipboard
+hyprshot
 cliphist
-swappy
 waybar
 pavucontrol
 blueman
