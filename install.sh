@@ -45,7 +45,12 @@ fi
 
 if [ -f /boot/loader/loader.conf ]; then
     echo "Configuring systemd-boot..."
+
     echo "timeout 0" | sudo tee /boot/loader/loader.conf
+
+    for arg in "quiet" "loglevel=3"; do
+        grep -qw "$arg" /etc/kernel/cmdline || sudo sed -i "s/\$/ $arg/" /etc/kernel/cmdline
+    done
 
     if prompt "Install secure boot"; then
 
@@ -127,6 +132,8 @@ link fcitx5 ~/.config/fcitx5
 link kitty ~/.config/kitty
 link ranger ~/.config/ranger
 
+cp configs/background ~/.config/background
+
 
 if prompt "Install toy packages"; then
     echo "Installing toy packages..."
@@ -136,6 +143,11 @@ fi
 
 if prompt "Install dev packages"; then
     ./install.dev.sh
+fi
+
+
+if prompt "Install Waydroid"; then
+    ./install.waydroid.sh
 fi
 
 
