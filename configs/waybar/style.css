@@ -63,7 +63,7 @@ window#waybar {
 }
 
 #custom-player,
-#custom-dnd,
+#custom-notification,
 #tray,
 #pulseaudio,
 #bluetooth,
@@ -76,7 +76,7 @@ window#waybar {
 
 #custom-player:hover,
 #clock:hover,
-#custom-dnd:hover,
+#custom-notification:hover,
 #pulseaudio:hover,
 #bluetooth:hover,
 #network:hover,

@@ -2,4 +2,4 @@
 
 wpctl set-mute @DEFAULT_SINK@ toggle
 
-~/.config/hypr/volume/notify.sh
+~/.config/hypr/volume/notify

@@ -15,7 +15,7 @@
     "clock"
   ],
   "modules-right": [
-    "custom/dnd",
+    "custom/notification",
     "pulseaudio",
     "bluetooth",
     "network",
@@ -24,6 +24,10 @@
     "cpu",
     "memory"
   ],
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
   "custom/player": {
     "interval": 1,
     "format": "{}",
@@ -44,7 +48,7 @@
     "on-click": "while dunstctl history-pop; do :; done",
     "on-click-right": "dunstctl close-all && dunstctl history-clear"
   },
-  "custom/dnd": {
+  "custom/notification": {
     "interval": 1,
     "format": "{}",
     "exec": "echo \"$([ $(dunstctl is-paused) = false ] && echo \" \" || echo \" \")$(($(dunstctl count displayed)+$(dunstctl count history)+$(dunstctl count waiting)))\"",
