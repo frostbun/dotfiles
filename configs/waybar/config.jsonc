@@ -45,7 +45,7 @@
     "format": "{:%a %b %d %I:%M:%S %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "interval": 1,
-    "on-click": "while dunstctl history-pop; do :; done",
+    "on-click": "for i in $(seq $(dunstctl count history)); do dunstctl history-pop; done",
     "on-click-right": "dunstctl close-all && dunstctl history-clear"
   },
   "custom/notification": {
