@@ -120,6 +120,10 @@ if prompt "Install youcompleteme"; then
 fi
 
 
+echo "Copying default background..."
+cp configs/background ~/.config/background
+
+
 echo "Creating symlinks for dotfiles..."
 link .gitconfig ~/.gitconfig
 link .icons ~/.icons
@@ -132,9 +136,15 @@ link fcitx5 ~/.config/fcitx5
 link kitty ~/.config/kitty
 link ranger ~/.config/ranger
 
-cp configs/background ~/.config/background
 
-jq 'if has("SKIP_HOST_UPDATE") then . else . + {"SKIP_HOST_UPDATE": true} end' ~/.config/discord/settings.json
+echo "Configuring Discord to skip host update..."
+if [ -f ~/.config/discord/settings.json ]; then
+    jq 'if has("SKIP_HOST_UPDATE") then . else . + {"SKIP_HOST_UPDATE": true} end' ~/.config/discord/settings.json > settings.json
+    mv settings.json ~/.config/discord/settings.json
+else
+    mkdir -p ~/.config/discord
+    echo '{"SKIP_HOST_UPDATE": true}' > ~/.config/discord/settings.json
+fi
 
 
 if prompt "Install toy packages"; then
