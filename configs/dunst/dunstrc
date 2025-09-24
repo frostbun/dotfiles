@@ -360,8 +360,8 @@
     timeout = 0
     override_pause_level = 60
 
-[volume]
-    appname = "volume"
+[no-history]
+    appname = "no-history"
     timeout = 1
     history_ignore = yes
 
