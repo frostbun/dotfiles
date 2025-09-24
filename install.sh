@@ -134,7 +134,7 @@ link ranger ~/.config/ranger
 
 cp configs/background ~/.config/background
 
-jq 'if has("SKIP_HOST_UPDATE") then . else . + {"SKIP_HOST_UPDATE": true} end' .config/discord/settings.json
+jq 'if has("SKIP_HOST_UPDATE") then . else . + {"SKIP_HOST_UPDATE": true} end' ~/.config/discord/settings.json
 
 
 if prompt "Install toy packages"; then
