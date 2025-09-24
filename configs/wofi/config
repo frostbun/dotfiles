@@ -1,6 +1,7 @@
 mode=drun
 prompt=Search
 insensitive=true
+matching=fuzzy
 close_on_focus_loss=true
 allow_images=true
 image_size=64

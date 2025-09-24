@@ -15,4 +15,4 @@ if [ ! -f "$cache_file" ] || [ "$(find "$cache_file" -mmin +43200 -print -quit)"
 fi
 
 
-cat "$cache_file" | wofi -d --cache-file=/dev/null | awk -F'\t' '{print $1}' | wl-copy
+cat "$cache_file" | wofi --dmenu --cache-file=/dev/null | awk -F'\t' '{print $1}' | wl-copy
