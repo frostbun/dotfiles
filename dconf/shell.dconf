@@ -1,6 +1,6 @@
 [/]
-disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'compiz-windows-effect@hermes83.github.com', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com']
+disable-extension-version-validation=true
+enabled-extensions=['blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com']
 favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
 
@@ -58,27 +58,6 @@ toggle-private-mode=@as []
 topbar-preview-size=16
 window-width-percentage=20
 
-[extensions/com/github/hermes83/compiz-windows-effect]
-resize-effect=true
-
-[extensions/dash-to-dock]
-background-opacity=0.0
-custom-theme-shrink=true
-dash-max-icon-size=64
-dock-position='BOTTOM'
-height-fraction=0.90000000000000002
-hot-keys=false
-isolate-monitors=true
-multi-monitor=true
-preferred-monitor=-2
-preferred-monitor-by-connector='DP-1'
-running-indicator-style='DASHES'
-scroll-action='switch-workspace'
-show-mounts=false
-show-show-apps-button=false
-show-trash=false
-transparency-mode='FIXED'
-
 [extensions/dash-to-panel]
 animate-appicon-hover=true
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
@@ -121,13 +100,6 @@ default-workspace-number=3
 [extensions/mediacontrols]
 extension-index=uint32 1
 extension-position='Left'
-
-[extensions/ncom/github/hermes83/compiz-alike-magic-lamp-effect]
-duration=200.0
-
-[extensions/system-monitor]
-show-download=false
-show-upload=false
 
 [extensions/tilingshell]
 last-version-name-installed='16.4'
