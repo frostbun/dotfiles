@@ -128,8 +128,9 @@ if prompt "Install Vundle for superuser"; then
 fi
 
 
-echo "Copying default background..."
-cp configs/background ~/.config/background
+if prompt "Copy default background"; then
+    cp configs/background ~/.config/background
+fi
 
 
 echo "Creating symlinks for dotfiles..."

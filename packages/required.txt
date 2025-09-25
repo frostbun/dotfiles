@@ -8,6 +8,7 @@ bat-extras
 fzf
 fd
 ripgrep
+jq
 trash-cli
 google-chrome
 discord
