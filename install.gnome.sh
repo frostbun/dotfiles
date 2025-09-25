@@ -3,8 +3,9 @@
 source ./common.sh
 
 
-echo "Removing GNOME bloatwares..."
-yay -Rcns --noconfirm $(comm -12 <(pacman -Qq | sort) <(sort packages/gnome.bloatwares.txt))
+if prompt "Remove GNOME bloatwares"; then
+    yay -Rcns --noconfirm $(comm -12 <(pacman -Qq | sort) <(sort packages/gnome.bloatwares.txt))
+fi
 
 
 echo "Installing GNOME extensions..."

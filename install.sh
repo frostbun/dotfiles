@@ -120,6 +120,14 @@ if prompt "Install youcompleteme"; then
 fi
 
 
+if prompt "Install Vundle for superuser"; then
+    sudo rm -rf /root/.vim
+    sudo rm -r /root/.vimrc
+    sudo cp -r ~/.vim /root/.vim
+    sudo cp ~/.vimrc /root/.vimrc
+fi
+
+
 echo "Copying default background..."
 cp configs/background ~/.config/background
 
