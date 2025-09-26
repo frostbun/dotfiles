@@ -1,7 +1,8 @@
 hyprpaper
+hyprpicker
 hypridle
 hyprlock
-hyprpicker
+hyprpolkitagent
 hyprshot
 cliphist
 waybar

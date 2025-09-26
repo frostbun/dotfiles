@@ -4,7 +4,7 @@ source ./common.sh
 
 
 if prompt "Remove GNOME bloatwares"; then
-    yay -Rcns --noconfirm $(comm -12 <(pacman -Qq | sort) <(sort packages/gnome.bloatwares.txt))
+    yay -Rcns --noconfirm $(comm -12 <(yay -Qq | sort) <(sort packages/gnome.bloatwares.txt))
 fi
 
 

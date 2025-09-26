@@ -4,7 +4,7 @@ source ./common.sh
 
 
 echo "Installing Hyprland packages..."
-yay -Q dolphin && yay -Rcns --noconfirm dolphin
+yay -Rcns --noconfirm $(comm -12 <(yay -Qq | sort) <(sort packages/hyprland.bloatwares.txt))
 install - < packages/hyprland.txt
 
 
