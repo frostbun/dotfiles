@@ -11,6 +11,8 @@ echo "Installing Nautilus..."
 yay -Rcns --noconfirm dolphin
 install nautilus nautilus-open-any-terminal
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'kitty'"
+dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+dconf write /org/gnome/desktop/interface/icon-theme "'candy-icons'"
 
 
 echo "Creating symlinks for dotfiles..."
