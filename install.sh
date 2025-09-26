@@ -122,7 +122,7 @@ fi
 
 if prompt "Install Vundle for superuser"; then
     sudo rm -rf /root/.vim
-    sudo rm -r /root/.vimrc
+    sudo rm -f /root/.vimrc
     sudo cp -r ~/.vim /root/.vim
     sudo cp ~/.vimrc /root/.vimrc
 fi
