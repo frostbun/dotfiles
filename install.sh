@@ -31,6 +31,7 @@ if ! pkg_installed cloudflare-warp-bin; then
     sudo systemctl enable --now warp-svc
     sleep 5
     warp-cli registration new
+    sudo rm /etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop
 fi
 
 
