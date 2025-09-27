@@ -13,3 +13,4 @@ gnome-maps
 gnome-user-docs
 baobab
 malcontent
+simple-scan

@@ -22,26 +22,17 @@ if ! pkg_installed reflector; then
 fi
 
 
-yay -Syu --noconfirm
-
-
 if ! pkg_installed cloudflare-warp-bin; then
     echo "Installing Cloudflare Warp..."
     install cloudflare-warp-bin
-    sudo systemctl enable --now warp-svc
+    sudo systemctl enable --now warp-svc.service
     sleep 5
     warp-cli registration new
     sudo rm /etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop
 fi
 
 
-if [[ $(hostnamectl chassis) =~ "laptop" ]]; then
-    if ! pkg_installed tlp; then
-        echo "Laptop detected, installing tlp..."
-        install tlp
-        sudo systemctl enable --now tlp.service
-    fi
-fi
+yay --noconfirm
 
 
 if [ -f /boot/loader/loader.conf ]; then
@@ -93,6 +84,12 @@ fi
 
 echo "Installing required packages..."
 install - < packages/required.txt
+
+
+if [[ $(hostnamectl chassis) =~ "laptop" ]]; then
+    echo "Laptop detected"
+    ./install.laptop.sh
+fi
 
 
 echo "Installing Oh My Zsh..."

@@ -14,8 +14,8 @@ install - < packages/dev.txt
 nvm install --lts
 
 
-sudo systemctl enable --now sshd
-sudo systemctl enable --now docker
+sudo systemctl enable --now sshd.service
+sudo systemctl enable --now docker.service
 
 
 mkdir -p ~/.local/share/unity3d
