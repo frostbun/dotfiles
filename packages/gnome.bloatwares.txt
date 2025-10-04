@@ -1,0 +1,16 @@
+epiphany
+htop
+nano
+yelp
+gnome-tour
+gnome-console
+gnome-contacts
+gnome-software
+gnome-connections
+gnome-text-editor
+gnome-disk-utility
+gnome-maps
+gnome-user-docs
+baobab
+malcontent
+simple-scan

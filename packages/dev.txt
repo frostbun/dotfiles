@@ -1,0 +1,10 @@
+git-lfs
+unityhub
+rider
+dotnet-sdk
+nvm
+miniconda3
+jdk-openjdk
+android-tools
+docker
+docker-compose

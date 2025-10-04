@@ -1,0 +1,31 @@
+[plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+help=@as []
+home=['<Super>e']
+magnifier=@as []
+magnifier-zoom-in=@as []
+magnifier-zoom-out=@as []
+screenreader=@as []
+
+[plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>r'
+command='kitty'
+name='kitty'
+
+[plugins/media-keys/custom-keybindings/custom1]
+binding='<Shift><Control>Escape'
+command='kitty -e btop'
+name='btop'
+
+[plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>Return'
+command='wofi'
+name='wofi'
+
+[plugins/media-keys/custom-keybindings/custom3]
+binding='<Super>t'
+command='google-chrome-stable'
+name='google-chrome-stable'
+
+[plugins/power]
+sleep-inactive-ac-type='nothing'

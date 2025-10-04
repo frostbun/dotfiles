@@ -1,0 +1,190 @@
+#!/usr/bin/env sh
+
+source ./common.sh
+
+
+if ! pkg_installed yay; then
+    echo "Installing yay..."
+    sudo pacman -S --needed --noconfirm git base-devel go
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    cd ..
+    rm -rf yay
+fi
+
+
+if ! pkg_installed reflector; then
+    echo "Installing reflector..."
+    install reflector
+    sudo systemctl enable --now reflector.timer
+    sudo systemctl start reflector.service
+fi
+
+
+if ! pkg_installed cloudflare-warp-bin; then
+    echo "Installing Cloudflare Warp..."
+    install cloudflare-warp-bin
+    sudo systemctl enable --now warp-svc.service
+    sleep 5
+    warp-cli registration new
+    sudo rm /etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop
+fi
+
+
+yay --noconfirm
+
+
+if [ -f /boot/loader/loader.conf ]; then
+    echo "Configuring systemd-boot..."
+
+    echo "timeout 0" | sudo tee /boot/loader/loader.conf
+
+    for arg in "quiet" "loglevel=3"; do
+        grep -qw "$arg" /etc/kernel/cmdline || sudo sed -i "s/\$/ $arg/" /etc/kernel/cmdline
+    done
+
+    if prompt "Install secure boot"; then
+
+        echo "Installing secure boot..."
+        install systemd-ukify
+
+        sudo cp -f configs/uki.conf /etc/kernel/uki.conf
+
+        sudo ukify genkey --config /etc/kernel/uki.conf
+
+        sudo /usr/lib/systemd/systemd-sbsign sign \
+            --private-key /etc/kernel/secure-boot-private-key.pem \
+            --certificate /etc/kernel/secure-boot-certificate.pem \
+            --output /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed \
+            /usr/lib/systemd/boot/efi/systemd-bootx64.efi
+
+        sudo bootctl install --secure-boot-auto-enroll yes \
+            --certificate /etc/kernel/secure-boot-certificate.pem \
+            --private-key /etc/kernel/secure-boot-private-key.pem
+
+        echo "secure-boot-enroll force" | sudo tee -a /boot/loader/loader.conf
+
+        sudo mkinitcpio -P
+    fi
+fi
+
+
+if [ -f /etc/systemd/zram-generator.conf ]; then
+    echo "Configuring zram-generator..."
+    sudo cp -f configs/zram-generator.conf /etc/systemd/zram-generator.conf
+fi
+
+
+if [ -f /etc/systemd/logind.conf ]; then
+    echo "Configuring logind..."
+    sudo cp -f configs/logind.conf /etc/systemd/logind.conf
+fi
+
+
+echo "Installing required packages..."
+install - < packages/required.txt
+
+
+if [[ $(hostnamectl chassis) =~ "laptop" ]]; then
+    echo "Laptop detected"
+    ./install.laptop.sh
+fi
+
+
+echo "Installing Oh My Zsh..."
+install zsh
+if [ ! -d ~/.oh-my-zsh ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+link .zshrc ~/.zshrc
+
+
+echo "Installing powerlevel10k..."
+if [ ! -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+fi
+link .p10k.zsh ~/.p10k.zsh
+
+
+echo "Installing Vundle..."
+link .vimrc ~/.vimrc
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+vim +PluginInstall +qall
+if prompt "Install youcompleteme"; then
+    ~/.vim/bundle/youcompleteme/install.py
+fi
+
+
+if prompt "Install Vundle for superuser"; then
+    sudo rm -rf /root/.vim
+    sudo rm -f /root/.vimrc
+    sudo cp -r ~/.vim /root/.vim
+    sudo cp ~/.vimrc /root/.vimrc
+fi
+
+
+if prompt "Copy default background"; then
+    cp configs/background ~/.config/background
+fi
+
+
+echo "Creating symlinks for dotfiles..."
+link .gitconfig ~/.gitconfig
+link .icons ~/.icons
+link lazygit ~/.config/lazygit
+link bat ~/.config/bat
+link btop ~/.config/btop
+link cava ~/.config/cava
+link fastfetch ~/.config/fastfetch
+link fcitx5 ~/.config/fcitx5
+link kitty ~/.config/kitty
+link ranger ~/.config/ranger
+
+
+echo "Configuring Discord to skip host update..."
+if [ -f ~/.config/discord/settings.json ]; then
+    jq 'if has("SKIP_HOST_UPDATE") then . else . + {"SKIP_HOST_UPDATE": true} end' ~/.config/discord/settings.json > settings.json
+    mv settings.json ~/.config/discord/settings.json
+else
+    mkdir -p ~/.config/discord
+    echo '{"SKIP_HOST_UPDATE": true}' > ~/.config/discord/settings.json
+fi
+
+
+if prompt "Install toy packages"; then
+    echo "Installing toy packages..."
+    install - < packages/toys.txt
+fi
+
+
+if prompt "Install dev packages"; then
+    ./install.dev.sh
+fi
+
+
+if prompt "Install Waydroid"; then
+    ./install.waydroid.sh
+fi
+
+
+if prompt "Install GNOME packages"; then
+    ./install.gnome.sh
+fi
+
+
+if prompt "Install Hyprland packages"; then
+    ./install.hyprland.sh
+fi
+
+
+echo "Cleaning up..."
+yay -Rcns --noconfirm $(yay -Qdtq)
+yay -Scc --noconfirm
+
+
+if prompt "Reboot now"; then
+    reboot
+fi

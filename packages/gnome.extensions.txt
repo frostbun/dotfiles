@@ -1,0 +1,11 @@
+blur-my-shell@aunetx
+burn-my-windows@schneegans.github.com
+clipboard-history@alexsaveau.dev
+cloudflare-warp-toggle@khaled.is-a.dev
+dash-to-panel@jderose9.github.com
+default-workspace@mateusrodcosta.com
+fq@megh
+grand-theft-focus@zalckos.github.com
+mediacontrols@cliffniff.github.com
+middleclickclose@paolo.tranquilli.gmail.com
+tilingshell@ferrarodomenico.com

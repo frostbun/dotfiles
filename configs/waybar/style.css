@@ -1,0 +1,110 @@
+@define-color background-darker rgba(30, 31, 41, 230);
+@define-color background #282a36;
+@define-color selection #44475a;
+@define-color foreground #f8f8f2;
+@define-color comment #6272a4;
+@define-color cyan #8be9fd;
+@define-color green #50fa7b;
+@define-color orange #ffb86c;
+@define-color pink #ff79c6;
+@define-color purple #bd93f9;
+@define-color red #ff5555;
+@define-color yellow #f1fa8c;
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 12pt;
+}
+
+window#waybar {
+    border: 2px solid @purple;
+    border-radius: 8px;
+    background: @background-darker;
+    color: @foreground;
+}
+
+#workspaces {
+    border: 2px solid @purple;
+    border-radius: 4px;
+    margin: 8px 4px;
+    margin-left: 8px;
+}
+
+#workspaces button {
+    border-radius: 0px;
+    padding: 0 4px;
+    background: @background;
+    color: @foreground;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: @selection;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background: @purple;
+}
+
+#workspaces button.urgent {
+    background: @red;
+}
+
+#clock {
+    font-size: 16pt;
+    border: 2px solid @purple;
+    padding: 0 4px;
+}
+
+#tray>*:hover {
+    background: @selection;
+}
+
+#custom-player,
+#custom-notification,
+#tray,
+#pulseaudio,
+#bluetooth,
+#battery {
+    border: 2px solid @purple;
+    border-radius: 4px;
+    margin: 8px 4px;
+    padding: 0 4px;
+}
+
+#custom-player:hover,
+#clock:hover,
+#custom-notification:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#custom-vpn:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover {
+    background: @selection;
+}
+
+#network,
+#cpu {
+    border: 2px solid @purple;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    margin: 8px 0 8px 4px;
+    padding: 0 4px;
+}
+
+#custom-vpn,
+#memory {
+    border: 2px solid @purple;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+    margin: 8px 4px 8px 0;
+    padding: 0 4px;
+}
+
+#memory {
+    margin-right: 8px;
+}

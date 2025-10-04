@@ -1,0 +1,26 @@
+[user]
+	email = manhnb1911@gmail.com
+	name = Manh Nguyen
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[push]
+	autoSetupRemote = true
+	followTags = true
+[pull]
+	ff = only
+[alias]
+	yike = "!git fetch -p && git pull"
+[core]
+	editor = vim
+	autocrlf = input
+[init]
+	defaultBranch = master
+[advice]
+	diverging = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

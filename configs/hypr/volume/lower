@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+wpctl set-volume @DEFAULT_SINK@ 5%-
+
+wpctl get-volume @DEFAULT_SINK@ | grep -q 'Volume: 0.00' && wpctl set-mute @DEFAULT_SINK@ 1
+
+~/.config/hypr/volume/notify

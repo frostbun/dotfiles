@@ -1,0 +1,15 @@
+hyprpaper
+hyprpicker
+hypridle
+hyprlock
+hyprpolkitagent
+hyprshot
+swappy
+wl-clipboard
+cliphist
+waybar
+pavucontrol
+blueman
+nautilus
+nautilus-open-any-terminal
+xdg-desktop-portal-gtk

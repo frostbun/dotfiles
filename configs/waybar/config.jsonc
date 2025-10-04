@@ -1,0 +1,139 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "margin-left": 8,
+  "margin-right": 8,
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/player",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/notification",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "custom/vpn",
+    "battery",
+    "cpu",
+    "memory"
+  ],
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+  "custom/player": {
+    "interval": 1,
+    "format": "{}",
+    "exec": "echo \"$([ $(playerctl status) = Playing ] && echo  || echo ) $(playerctl metadata --format '{{title}} - {{artist}}')\"",
+    "exec-if": "[ $(playerctl status) = Playing ] || [ $(playerctl status) = Paused ]",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "max-length": 32
+  },
+  "hyprland/window": {
+    "max-length": 64
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%a %b %d %I:%M:%S %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "on-click": "for i in $(seq $(dunstctl count history)); do dunstctl history-pop; done",
+    "on-click-right": "dunstctl close-all && dunstctl history-clear"
+  },
+  "custom/notification": {
+    "interval": 1,
+    "format": "{}",
+    "exec": "echo \"$([ $(dunstctl is-paused) = false ] && echo \" \" || echo \" \")$(($(dunstctl count history)+$(dunstctl count waiting)))\"",
+    "on-click": "dunstctl set-paused toggle"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}% {format_source}",
+    "format-muted": "  {format_source}",
+    "format-bluetooth": "{icon}{volume}% {format_source}",
+    "format-bluetooth-muted": "  {format_source}",
+    "format-source": "{volume}%",
+    "format-source-muted": " ",
+    "format-icons": {
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "~/.config/hypr/volume/mute",
+    "on-scroll-up": "~/.config/hypr/volume/raise",
+    "on-scroll-down": "~/.config/hypr/volume/lower",
+    "on-click-middle": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
+  },
+  "bluetooth": {
+    "format": "{status}",
+    "format-connected": "{device_alias}",
+    "format-connected-battery": "{device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\t{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\t{num_connections} connected\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "blueman-manager",
+    "on-click-right": "bluetoothctl show | grep -q 'PowerState: off' && bluetoothctl power on || bluetoothctl power off"
+  },
+  "network": {
+    "format-ethernet": " Connected",
+    "format-wifi": "{icon}{essid}",
+    "tooltip-format": "{ipaddr}/{cidr} - {gwaddr}",
+    "format-disconnected": " Disconnected",
+    "format-icons": [
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤥 ",
+      "󰤨 "
+    ],
+    "on-click": "nm-connection-editor"
+  },
+  "custom/vpn": {
+    "interval": 1,
+    "format": "{}",
+    "exec": "warp-cli status | grep Connected &>/dev/null && echo  Connected || echo  Disconnected",
+    "on-click": "warp-cli status | grep Connected && warp-cli disconnect || warp-cli connect"
+  },
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon}{capacity}%",
+    "format-charging": "{icon}󱐋{capacity}%",
+    "format-full": "󰁹Full",
+    "tooltip-format": "{timeTo}",
+    "format-icons": [
+      "󰁺",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂"
+    ]
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "on-click": "kitty -e btop"
+  },
+  "memory": {
+    "interval": 1,
+    "format": " {}%",
+    "on-click": "kitty -e btop"
+  }
+}
