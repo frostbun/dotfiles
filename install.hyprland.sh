@@ -15,8 +15,8 @@ hyprpm enable hyprexpo
 
 
 echo "Creating symlinks for dotfiles..."
-mkdir $dotfiles/configs/hyprland/custom
-touch $dotfiles/configs/hyprland/custom/custom.conf
+mkdir $dotfiles/configs/hypr/hyprland/custom
+touch $dotfiles/configs/hypr/hyprland/custom/custom.conf
 link hypr ~/.config/hypr
 link waybar ~/.config/waybar
 link wofi ~/.config/wofi

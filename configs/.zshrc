@@ -154,5 +154,6 @@ export PATH="$HOME/.local/bin:$PATH"
 alias rm='rm -I'
 alias mv='mv -i'
 alias cp='cp -i'
+alias mkdir='mkdir -p'
 alias copy='kitten clipboard'
 alias paste='kitten clipboard -g'
