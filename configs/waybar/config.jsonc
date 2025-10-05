@@ -127,12 +127,12 @@
     ]
   },
   "cpu": {
-    "interval": 1,
+    "interval": 2,
     "format": " {usage}%",
     "on-click": "kitty -e btop"
   },
   "memory": {
-    "interval": 1,
+    "interval": 2,
     "format": " {}%",
     "on-click": "kitty -e btop"
   }
