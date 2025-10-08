@@ -69,8 +69,10 @@ AutoSavePeriod=30
 
 [Behavior/DisabledAddons]
 0=clipboard
-1=imselector
-2=quickphrase
-3=spell
-4=unicode
+1=emoji
+2=imselector
+3=kimpanel
+4=quickphrase
+5=spell
+6=unicode
 
