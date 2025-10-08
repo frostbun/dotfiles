@@ -25,4 +25,5 @@ link dunst ~/.config/dunst
 
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'kitty'"
 dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+dconf write /org/gnome/desktop/interface/accent-color "'purple'"
 dconf write /org/gnome/desktop/interface/icon-theme "'candy-icons'"

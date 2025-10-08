@@ -102,7 +102,7 @@ extension-index=uint32 1
 extension-position='Left'
 
 [extensions/tilingshell]
-last-version-name-installed='16.4'
+last-version-name-installed='17.0'
 layouts-json='[{"id":"0","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[3,1]},{"x":0.67,"y":0.67,"width":0.33,"height":0.33,"groups":[3,1]}]},{"id":"1","tiles":[{"x":0,"y":0,"width":0.67,"height":0.67,"groups":[2,1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[1,2]}]},{"id":"2","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":1,"groups":[1]}]},{"id":"3","tiles":[{"x":0,"y":0,"width":1,"height":0.67,"groups":[1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]}]}]'
 overridden-settings='{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
 selected-layouts=[['0'], ['0'], ['2'], ['0'], ['3']]
@@ -120,7 +120,7 @@ open-new-window-application-9=@as []
 screenshot=['Print']
 screenshot-window=@as []
 show-screen-recording-ui=@as []
-show-screenshot-ui=['<Super>s']
+show-screenshot-ui=['<Shift><Super>s']
 switch-to-application-1=@as []
 switch-to-application-2=@as []
 switch-to-application-3=@as []

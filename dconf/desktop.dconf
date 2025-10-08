@@ -32,6 +32,7 @@ sources=[('xkb', 'us')]
 xkb-options=['terminate:ctrl_alt_bksp']
 
 [interface]
+accent-color='purple'
 clock-show-seconds=true
 clock-show-weekday=true
 color-scheme='prefer-dark'
