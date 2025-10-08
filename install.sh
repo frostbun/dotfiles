@@ -32,6 +32,7 @@ if ! pkg_installed cloudflare-warp-bin; then
 fi
 
 
+echo "Updating system..."
 yay --noconfirm
 
 
@@ -92,28 +93,26 @@ if [[ $(hostnamectl chassis) =~ "laptop" ]]; then
 fi
 
 
-echo "Installing Oh My Zsh..."
-install zsh
 if [ ! -d ~/.oh-my-zsh ]; then
+    echo "Installing Oh My Zsh..."
+    install zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    link .zshrc ~/.zshrc
 fi
-link .zshrc ~/.zshrc
 
 
-echo "Installing powerlevel10k..."
 if [ ! -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
+    echo "Installing powerlevel10k..."
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+    link .p10k.zsh ~/.p10k.zsh
 fi
-link .p10k.zsh ~/.p10k.zsh
 
 
-echo "Installing Vundle..."
-link .vimrc ~/.vimrc
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    echo "Installing Vundle..."
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
-vim +PluginInstall +qall
-if prompt "Install youcompleteme"; then
+    link .vimrc ~/.vimrc
+    vim +PluginInstall +qall
     ~/.vim/bundle/youcompleteme/install.py
 fi
 
