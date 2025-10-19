@@ -17,6 +17,7 @@ fi
 if ! pkg_installed reflector; then
     echo "Installing reflector..."
     install reflector
+    sudo cp -f configs/reflector.conf /etc/xdg/reflector/reflector.conf
     sudo systemctl enable --now reflector.timer
     sudo systemctl start reflector.service
 fi
