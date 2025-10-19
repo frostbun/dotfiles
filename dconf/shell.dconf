@@ -110,16 +110,16 @@ extension-index=uint32 1
 extension-position='Left'
 
 [extensions/tilingshell]
-focus-window-down=['<Super>j']
-focus-window-left=['<Super>h']
-focus-window-right=['<Super>l']
-focus-window-up=['<Super>k']
+focus-window-down=['<Super>down', '<Super>j']
+focus-window-left=['<Super>left', '<Super>h']
+focus-window-right=['<Super>right', '<Super>l']
+focus-window-up=['<Super>up', '<Super>k']
 last-version-name-installed='17.0'
 layouts-json='[{"id":"0","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[3,1]},{"x":0.67,"y":0.67,"width":0.33,"height":0.33,"groups":[3,1]}]},{"id":"1","tiles":[{"x":0,"y":0,"width":0.67,"height":0.67,"groups":[2,1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[1,2]}]},{"id":"2","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":1,"groups":[1]}]},{"id":"3","tiles":[{"x":0,"y":0,"width":1,"height":0.67,"groups":[1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]}]}]'
-move-window-down=['<Shift><Super>j']
-move-window-left=['<Shift><Super>h']
-move-window-right=['<Shift><Super>l']
-move-window-up=['<Shift><Super>k']
+move-window-down=['<Shift><Super>down', '<Shift><Super>j']
+move-window-left=['<Shift><Super>left', '<Shift><Super>h']
+move-window-right=['<Shift><Super>right', '<Shift><Super>l']
+move-window-up=['<Shift><Super>up', '<Shift><Super>k']
 overridden-settings='{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
 selected-layouts=[['0'], ['0'], ['2'], ['0'], ['3']]
 
