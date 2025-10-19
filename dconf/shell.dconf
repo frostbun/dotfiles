@@ -1,6 +1,6 @@
 [/]
 disable-extension-version-validation=true
-enabled-extensions=['blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-history@alexsaveau.dev', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com']
+enabled-extensions=['blur-my-shell@aunetx', 'burn-my-windows@schneegans.github.com', 'clipboard-indicator@tudmotu.com', 'cloudflare-warp-toggle@khaled.is-a.dev', 'dash-to-panel@jderose9.github.com', 'default-workspace@mateusrodcosta.com', 'fq@megh', 'grand-theft-focus@zalckos.github.com', 'mediacontrols@cliffniff.github.com', 'middleclickclose@paolo.tranquilli.gmail.com', 'tilingshell@ferrarodomenico.com']
 favorite-apps=['google-chrome.desktop', 'unityhub.desktop', 'rider.desktop', 'code.desktop', 'discord.desktop', 'kitty.desktop', 'org.gnome.Nautilus.desktop']
 welcome-dialog-last-shown-version='48.4'
 
@@ -50,13 +50,21 @@ last-extension-version=46
 last-prefs-version=46
 prefs-open-count=8
 
-[extensions/clipboard-history]
+[extensions/clipboard-indicator]
+cache-size=8
+clear-history=@as []
 display-mode=2
+history-size=64
+move-item-first=true
+next-entry=@as []
+notify-on-cycle=false
+paste-on-select=true
+prev-entry=@as []
+preview-size=32
+private-mode-binding=@as []
 strip-text=true
 toggle-menu=['<Super>v']
-toggle-private-mode=@as []
 topbar-preview-size=16
-window-width-percentage=20
 
 [extensions/dash-to-panel]
 animate-appicon-hover=true
@@ -102,8 +110,16 @@ extension-index=uint32 1
 extension-position='Left'
 
 [extensions/tilingshell]
+focus-window-down=['<Super>j']
+focus-window-left=['<Super>h']
+focus-window-right=['<Super>l']
+focus-window-up=['<Super>k']
 last-version-name-installed='17.0'
 layouts-json='[{"id":"0","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[3,1]},{"x":0.67,"y":0.67,"width":0.33,"height":0.33,"groups":[3,1]}]},{"id":"1","tiles":[{"x":0,"y":0,"width":0.67,"height":0.67,"groups":[2,1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":0.67,"groups":[1,2]}]},{"id":"2","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":1,"groups":[1]}]},{"id":"3","tiles":[{"x":0,"y":0,"width":1,"height":0.67,"groups":[1]},{"x":0,"y":0.67,"width":1,"height":0.33,"groups":[1]}]}]'
+move-window-down=['<Shift><Super>j']
+move-window-left=['<Shift><Super>h']
+move-window-right=['<Shift><Super>l']
+move-window-up=['<Shift><Super>k']
 overridden-settings='{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
 selected-layouts=[['0'], ['0'], ['2'], ['0'], ['3']]
 

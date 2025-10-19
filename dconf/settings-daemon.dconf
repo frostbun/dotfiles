@@ -2,10 +2,12 @@
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 help=@as []
 home=['<Super>e']
+logout=@as []
 magnifier=@as []
 magnifier-zoom-in=@as []
 magnifier-zoom-out=@as []
 screenreader=@as []
+screensaver=['<Control><Alt>Delete']
 
 [plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>r'
