@@ -107,7 +107,7 @@ switch-to-workspace-right=@as []
 switch-to-workspace-up=@as []
 switch-windows=['<Alt>Tab']
 switch-windows-backward=['<Shift><Alt>Tab']
-toggle-maximized=@as []
+toggle-maximized=['<Super>f']
 unmaximize=@as []
 
 [wm/preferences]
