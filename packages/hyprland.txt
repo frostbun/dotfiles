@@ -11,5 +11,4 @@ waybar
 pavucontrol
 blueman
 nautilus
-nautilus-open-any-terminal
 xdg-desktop-portal-gtk

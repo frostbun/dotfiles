@@ -38,3 +38,6 @@ gparted
 dconf-editor
 xdg-terminal-exec
 visual-studio-code-bin
+nautilus-open-any-terminal
+nautilus-admin-gtk4
+nautilus-code

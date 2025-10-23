@@ -15,12 +15,8 @@ gext install $(cat packages/gnome.extensions.txt)
 link burn-my-windows ~/.config/burn-my-windows
 
 
-echo "Installing 'Open Kitty here' extension..."
-install nautilus-open-any-terminal
-dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'kitty'"
-
-
 echo "Copying settings..."
+dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'kitty'"
 dconf load /org/gnome/shell/ < dconf/shell.dconf
 dconf load /org/gnome/mutter/ < dconf/mutter.dconf
 dconf load /org/gnome/desktop/ < dconf/desktop.dconf
