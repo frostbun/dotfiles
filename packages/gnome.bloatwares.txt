@@ -3,6 +3,7 @@ htop
 nano
 yelp
 gnome-tour
+gnome-music
 gnome-console
 gnome-contacts
 gnome-software

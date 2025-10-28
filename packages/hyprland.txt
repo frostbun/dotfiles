@@ -11,4 +11,13 @@ waybar
 pavucontrol
 blueman
 nautilus
+decibels
+totem
+gnome-calculator
+gnome-calendar
+gnome-clocks
+gnome-weather
+gnome-font-viewer
+gnome-characters
+gnome-logs
 xdg-desktop-portal-gtk
