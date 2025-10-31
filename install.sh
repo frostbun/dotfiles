@@ -3,6 +3,9 @@
 source ./common.sh
 
 
+sudo cp -f configs/makepkg.conf /etc/makepkg.conf
+
+
 if ! pkg_installed yay; then
     echo "Installing yay..."
     sudo pacman -S --needed --noconfirm git base-devel go
