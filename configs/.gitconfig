@@ -21,3 +21,4 @@
 	diverging = false
 	addEmbeddedRepo = false
 	addEmptyPathspec = false
+	skippedCherryPicks = false
