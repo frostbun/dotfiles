@@ -121,6 +121,13 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 fi
 
 
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    echo "Installing TPM..."
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    link .tmux.conf ~/.tmux.conf
+fi
+
+
 if prompt "Install Vundle for superuser"; then
     sudo rm -rf /root/.vim
     sudo rm -f /root/.vimrc
