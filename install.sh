@@ -3,6 +3,11 @@
 source ./common.sh
 
 
+if prompt "Enable multilib"; then
+    sudo cp -f configs/pacman.conf /etc/pacman.conf
+fi
+
+
 sudo cp -f configs/makepkg.conf /etc/makepkg.conf
 
 
@@ -172,6 +177,11 @@ fi
 
 if prompt "Install dev packages"; then
     ./install.dev.sh
+fi
+
+
+if prompt "Install games"; then
+    ./install.games.sh
 fi
 
 
