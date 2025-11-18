@@ -2,10 +2,8 @@
 
 source ./common.sh
 
-if grep -q "#\[multilib\]" /etc/pacman.conf; then
-    if prompt "Enable multilib"; then
-        sudo cp -f configs/pacman.conf /etc/pacman.conf
-    fi
+if grep -q "#\[multilib\]" /etc/pacman.conf && prompt "Enable multilib"; then
+    sudo cp -f configs/pacman.conf /etc/pacman.conf
 fi
 
 
@@ -55,7 +53,7 @@ if [ -f /boot/loader/loader.conf ]; then
         grep -qw "$arg" /etc/kernel/cmdline || sudo sed -i "s/\$/ $arg/" /etc/kernel/cmdline
     done
 
-    if prompt "Install secure boot"; then
+    if [ ! -f /etc/kernel/secure-boot-private-key.pem ] && prompt "Install secure boot"; then
 
         echo "Installing secure boot..."
         install systemd-ukify
