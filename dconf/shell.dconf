@@ -122,6 +122,7 @@ move-window-right=['<Shift><Super>right', '<Shift><Super>l']
 move-window-up=['<Shift><Super>up', '<Shift><Super>k']
 overridden-settings='{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
 selected-layouts=[['0'], ['0'], ['2'], ['0'], ['3']]
+window-use-custom-border-color=false
 
 [keybindings]
 open-new-window-application-1=@as []
