@@ -2,9 +2,10 @@
 
 source ./common.sh
 
-
-if prompt "Enable multilib"; then
-    sudo cp -f configs/pacman.conf /etc/pacman.conf
+if grep -q "#\[multilib\]" /etc/pacman.conf; then
+    if prompt "Enable multilib"; then
+        sudo cp -f configs/pacman.conf /etc/pacman.conf
+    fi
 fi
 
 
