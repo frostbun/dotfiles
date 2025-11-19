@@ -35,7 +35,7 @@ if ! pkg_installed cloudflare-warp-bin; then
     install cloudflare-warp-bin
     sudo systemctl enable --now warp-svc.service
     sleep 5
-    warp-cli registration new
+    yes | warp-cli registration new
 fi
 sudo rm -f /etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop
 
@@ -73,9 +73,9 @@ if [ -f /boot/loader/loader.conf ]; then
             --private-key /etc/kernel/secure-boot-private-key.pem
 
         echo "secure-boot-enroll force" | sudo tee -a /boot/loader/loader.conf
-
-        sudo mkinitcpio -P
     fi
+
+    sudo mkinitcpio -P
 fi
 
 
