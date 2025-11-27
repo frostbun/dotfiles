@@ -16,7 +16,7 @@
     font-size: 12pt;
 }
 
-window#waybar {
+#waybar {
     border: 2px solid @purple;
     border-radius: 8px;
     background: @background-darker;
@@ -27,7 +27,6 @@ window#waybar {
     border: 2px solid @purple;
     border-radius: 4px;
     margin: 8px 4px;
-    margin-left: 8px;
 }
 
 #workspaces button {
@@ -83,12 +82,14 @@ window#waybar {
 #custom-vpn:hover,
 #battery:hover,
 #cpu:hover,
-#memory:hover {
+#memory:hover,
+#temperature:hover {
     background: @selection;
 }
 
 #network,
-#cpu {
+#cpu,
+#temperature.cpu {
     border: 2px solid @purple;
     border-right: 0;
     border-radius: 4px 0 0 4px;
@@ -97,7 +98,8 @@ window#waybar {
 }
 
 #custom-vpn,
-#memory {
+#memory,
+#temperature.gpu {
     border: 2px solid @purple;
     border-left: 0;
     border-radius: 0 4px 4px 0;
@@ -105,6 +107,10 @@ window#waybar {
     padding: 0 4px;
 }
 
-#memory {
+#waybar .modules-left>widget:first-child>* {
+    margin-left: 8px;
+}
+
+#waybar .modules-right>widget:last-child>* {
     margin-right: 8px;
 }
