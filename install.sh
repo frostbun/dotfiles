@@ -8,6 +8,7 @@ fi
 
 
 sudo cp -f configs/makepkg.conf /etc/makepkg.conf
+link yay ~/.config/yay
 
 
 if ! pkg_installed yay; then
