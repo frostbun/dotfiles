@@ -14,8 +14,9 @@ hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm enable hyprexpo
 
 
-echo Fetching emoji list...
-./configs/wofi/emoji-fetch
+if prompt "Fetch emoji list"; then
+    ./configs/wofi/emoji-fetch
+fi
 
 
 echo "Creating symlinks for dotfiles..."
