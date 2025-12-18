@@ -20,6 +20,7 @@
 	defaultBranch = master
 [advice]
 	diverging = false
+    detachedHead = false
 	addEmbeddedRepo = false
 	addEmptyPathspec = false
 	skippedCherryPicks = false
