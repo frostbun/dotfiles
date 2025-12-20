@@ -10,6 +10,7 @@ fzf
 fd
 ripgrep
 jq
+cloudflared
 trash-cli
 google-chrome
 discord
