@@ -149,7 +149,7 @@ bindkey -e
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
 
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 
 alias rm='rm -I'
 alias mv='mv -i'
@@ -157,3 +157,4 @@ alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias copy='kitten clipboard'
 alias paste='kitten clipboard -g'
+alias rg='rg -S'

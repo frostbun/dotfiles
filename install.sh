@@ -147,6 +147,7 @@ fi
 
 
 echo "Creating symlinks for dotfiles..."
+link .bin ~/.bin
 link .gitconfig ~/.gitconfig
 link .icons ~/.icons
 link lazygit ~/.config/lazygit
