@@ -13,6 +13,7 @@
 [alias]
 	yike = "!git fetch -p && git pull"
     frp = "!git fetch && git rebase && git push"
+    frs = "!git fetch && git stash save && git rebase && git stash pop"
 [core]
 	editor = vim
 	autocrlf = input
