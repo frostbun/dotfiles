@@ -27,15 +27,11 @@ git clone --depth=1 https://github.com/casualsnek/waydroid_script
 cd waydroid_script
 python3 -m venv venv
 venv/bin/pip install -r requirements.txt
-sudo venv/bin/python3 main.py install libhoudini
+sudo venv/bin/python3 main.py install {libhoudini, magisk, gapps}
 
-
-if prompt "Install gapps"; then
-    sudo venv/bin/python3 main.py install gapps
-    read -p "Open Waydroid & press [Enter] to continue..."
-    sudo venv/bin/python3 main.py certified
-    echo "Follow the instructions & clear Google Play Services data after 15 mins"
-fi
+read -p "Open Waydroid & press [Enter] to continue..."
+sudo venv/bin/python3 main.py certified
+echo "Follow the instructions & clear Google Play Services data after 15 mins"
 
 
 cd ..
