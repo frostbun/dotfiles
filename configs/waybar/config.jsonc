@@ -150,11 +150,11 @@
     "format-full": "󰁹Full",
     "tooltip-format": "{timeTo}",
     "format-icons": [
-      "󰁺",
-      "󰁼",
-      "󰁾",
-      "󰂀",
-      "󰂂"
+      "󰁻",
+      "󰁽",
+      "󰁿",
+      "󰂁",
+      "󰁹"
     ]
   }
 }
