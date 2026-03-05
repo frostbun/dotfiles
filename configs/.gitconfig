@@ -1,0 +1,28 @@
+[user]
+	email = manhnb1911@gmail.com
+	name = Manh Nguyen
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[push]
+	autoSetupRemote = true
+	followTags = true
+[pull]
+	ff = only
+[alias]
+	yike = "!git submodule foreach --quiet pwd | parallel -j 8 'git -C {} fetch --quiet -p && git -C {} pull --quiet && echo -e \"\\e[32m$(basename {})\\e[0m - $(git -C {} log -1 --format=\"\\e[31m%h\\e[0m - %B\")\"'"
+	release = "!f() { git tag -a \"v$1\" -m \"$1\"; }; f"
+    frp = "!git fetch && git rebase && git push"
+    frs = "!git fetch && git stash save && git rebase && git stash pop"
+[core]
+	editor = vim
+	autocrlf = input
+[init]
+	defaultBranch = master
+[advice]
+	diverging = false
+    detachedHead = false
+	addEmbeddedRepo = false
+	addEmptyPathspec = false
+	skippedCherryPicks = false

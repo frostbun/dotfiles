@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+wpctl set-volume -l 1.5 @DEFAULT_SINK@ 5%+
+
+wpctl set-mute @DEFAULT_SINK@ 0
+
+~/.config/hypr/volume/notify

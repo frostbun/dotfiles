@@ -1,0 +1,11 @@
+git-lfs
+unityhub
+rider
+dotnet-sdk
+nodejs
+npm
+jdk-openjdk
+android-tools
+docker
+docker-compose
+rclone
