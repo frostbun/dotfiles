@@ -7,13 +7,6 @@ echo "Installing dev packages..."
 install - < packages/dev.txt
 
 
-source /opt/miniconda3/etc/profile.d/conda.sh
-source /usr/share/nvm/init-nvm.sh
-
-
-nvm install --lts
-
-
 sudo systemctl enable --now sshd.service
 sudo systemctl enable --now docker.service
 
