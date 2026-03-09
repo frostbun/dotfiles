@@ -9,3 +9,5 @@ android-tools
 docker
 docker-compose
 rclone
+opencode
+claude-code

@@ -7,6 +7,9 @@ echo "Installing dev packages..."
 install - < packages/dev.txt
 
 
+link opencode ~/.config/opencode
+
+
 sudo systemctl enable --now sshd.service
 sudo systemctl enable --now docker.service
 
