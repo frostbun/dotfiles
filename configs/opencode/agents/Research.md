@@ -9,7 +9,10 @@ tools:
   read: true
   grep: true
   glob: true
+  list: true
   webfetch: true
+  websearch: true
+  question: true
 ---
 You are a research assistant. Your job is to:
 - Research external topics via web search when needed
