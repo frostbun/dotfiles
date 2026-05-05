@@ -1,0 +1,14 @@
+[Unit]
+Description=Rclone Remote Control and Web UI
+
+[Service]
+ExecStart=/usr/bin/rclone rcd \
+    --config=%E/rclone/rclone.conf \
+    --rc-htpasswd=%E/rclone/htpasswd \
+    --rc-web-gui \
+    --rc-web-gui-no-open-browser
+
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

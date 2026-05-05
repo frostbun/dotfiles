@@ -1,0 +1,4 @@
+dolphin
+konsole
+kate
+ark

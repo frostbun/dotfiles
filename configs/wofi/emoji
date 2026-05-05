@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+
+cache_file="${XDG_CACHE_HOME:-$HOME/.cache}/emoji-list.txt"
+
+
+if [ ! -f "$cache_file" ] || [ "$(find "$cache_file" -mmin +43200 -print -quit)" ]; then
+    ./emoji-fetch
+fi
+
+
+cat "$cache_file" | wofi --dmenu --matching=fuzzy --cache-file=/dev/null | awk -F'\t' '{print $1}' | wl-copy

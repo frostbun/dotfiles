@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+brightness=$(brightnessctl -m | awk -F, '{print int($4)}')
+
+icon="$HOME/.icons/candy-icons/preferences/scalable/preferences-desktop-display.svg"
+
+notify-send -a "no-history" -r 51 -e "Brightness: $brightness%" -h int:value:$brightness -i $icon

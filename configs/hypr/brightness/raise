@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+brightnessctl set 5%+
+
+~/.config/hypr/brightness/notify

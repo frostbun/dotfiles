@@ -1,0 +1,38 @@
+[plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+help=@as []
+home=['<Super>e']
+logout=@as []
+magnifier=@as []
+magnifier-zoom-in=@as []
+magnifier-zoom-out=@as []
+screenreader=@as []
+screensaver=['<Control><Alt>Delete']
+
+[plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>r'
+command='xdg-terminal-exec'
+name='xdg-terminal-exec'
+
+[plugins/media-keys/custom-keybindings/custom1]
+binding='<Shift><Control>Escape'
+command='xdg-terminal-exec btop'
+name='btop'
+
+[plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>Return'
+command='wofi'
+name='wofi'
+
+[plugins/media-keys/custom-keybindings/custom3]
+binding='<Super>t'
+command='google-chrome-stable'
+name='google-chrome-stable'
+
+[plugins/media-keys/custom-keybindings/custom4]
+binding='<Super>q'
+command='code /home/frostbun/dotfiles'
+name='dotfiles'
+
+[plugins/power]
+sleep-inactive-ac-type='nothing'
