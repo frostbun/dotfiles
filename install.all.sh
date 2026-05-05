@@ -99,7 +99,7 @@ fi
 
 
 echo "Installing required packages..."
-install - < packages/required.txt
+install < packages/required.txt
 
 
 if [[ $(hostnamectl chassis) =~ "laptop" ]]; then
@@ -114,7 +114,6 @@ sudo systemctl enable --now sshd.service
 
 if [ ! -d ~/.oh-my-zsh ]; then
     echo "Installing Oh My Zsh..."
-    install zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     link .zshrc ~/.zshrc
 fi
@@ -186,7 +185,7 @@ fi
 
 if prompt "Install toy packages"; then
     echo "Installing toy packages..."
-    install - < packages/toys.txt
+    install < packages/toys.txt
 fi
 
 

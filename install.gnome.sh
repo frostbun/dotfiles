@@ -9,7 +9,7 @@ fi
 
 
 echo "Installing GNOME extensions..."
-install extension-manager gnome-extensions-cli
+install < packages/gnome.txt
 sudo rm -f /usr/share/applications/org.gnome.Extensions.desktop
 gext install $(cat packages/gnome.extensions.txt)
 link burn-my-windows ~/.config/burn-my-windows

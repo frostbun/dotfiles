@@ -7,7 +7,7 @@ install() {
     else
         pkgs=$@
     fi
-    echo $pkgs | yay -S --needed --noconfirm -
+    yay -S --needed --noconfirm $(echo $pkgs)
     yay -D --asexplicit --noconfirm $(comm -12 <(yay -Qdq | sort) <(echo $pkgs | sort))
 }
 

@@ -4,6 +4,7 @@ cpio
 go
 python
 uv
+zsh
 man-db
 lazygit
 tmux

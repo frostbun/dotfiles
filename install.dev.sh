@@ -4,7 +4,7 @@ source ./common.sh
 
 
 echo "Installing dev packages..."
-install - < packages/dev.txt
+install < packages/dev.txt
 
 
 link opencode ~/.config/opencode

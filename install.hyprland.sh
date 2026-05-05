@@ -5,7 +5,7 @@ source ./common.sh
 
 echo "Installing Hyprland packages..."
 yay -Rcns --noconfirm $(comm -12 <(yay -Qq | sort) <(sort packages/hyprland.bloatwares.txt))
-install - < packages/hyprland.txt
+install < packages/hyprland.txt
 
 
 echo "Installing Hyprland plugins..."
