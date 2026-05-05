@@ -2,8 +2,13 @@ export dotfiles=$(pwd)
 
 
 install() {
-    yay -S --needed --noconfirm $@
-    yay -D --asexplicit --noconfirm $@
+    if [[ ! -t 0 ]]; then
+        pkgs=$(cat)
+    else
+        pkgs=$@
+    fi
+    echo $pkgs | yay -S --needed --noconfirm -
+    yay -D --asexplicit --noconfirm $(comm -12 <(yay -Qdq | sort) <(echo $pkgs | sort))
 }
 
 
