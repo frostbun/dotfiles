@@ -170,8 +170,8 @@ link ranger ~/.config/ranger
 link kitty ~/.config/kitty
 link alacritty ~/.config/alacritty
 
-dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'xdg-terminal-exec'"
-
+dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'custom'"
+dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/custom-local-command "'xdg-terminal-exec'"
 
 echo "Configuring Discord to skip host update..."
 if [ -f ~/.config/discord/settings.json ]; then
