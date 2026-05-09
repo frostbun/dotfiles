@@ -13,6 +13,7 @@ bat
 bat-extras
 fd
 ripgrep
+fzf
 jq
 cloudflared
 trash-cli
