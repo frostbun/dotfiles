@@ -16,12 +16,10 @@ ripgrep
 fzf
 jq
 openssh
-cloudflared
 trash-cli
 btop
 ranger
 fastfetch
-ttf-jetbrains-mono-nerd
 git-lfs
 dotnet-sdk
 docker
