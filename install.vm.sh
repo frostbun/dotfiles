@@ -103,7 +103,16 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
 fi
 
 
+if prompt "Install Vundle for superuser"; then
+    sudo rm -rf /root/.vim
+    sudo rm -f /root/.vimrc
+    sudo cp -r ~/.vim /root/.vim
+    sudo cp ~/.vimrc /root/.vimrc
+fi
+
+
 echo "Creating symlinks for dotfiles..."
+link systemd ~/.config/systemd
 link .bin ~/.bin
 link .gitconfig ~/.gitconfig
 link lazygit ~/.config/lazygit

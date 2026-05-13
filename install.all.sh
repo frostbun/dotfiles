@@ -99,7 +99,7 @@ fi
 
 
 echo "Installing required packages..."
-install < packages/required.txt
+install < packages/required.all.txt
 
 
 if [[ $(hostnamectl chassis) =~ "laptop" ]]; then
@@ -159,19 +159,20 @@ echo "Creating symlinks for dotfiles..."
 link systemd ~/.config/systemd
 link .bin ~/.bin
 link .gitconfig ~/.gitconfig
-link .icons ~/.icons
 link lazygit ~/.config/lazygit
 link bat ~/.config/bat
 link btop ~/.config/btop
-link cava ~/.config/cava
 link fastfetch ~/.config/fastfetch
-link fcitx5 ~/.config/fcitx5
 link ranger ~/.config/ranger
+link cava ~/.config/cava
+link fcitx5 ~/.config/fcitx5
 link kitty ~/.config/kitty
 link alacritty ~/.config/alacritty
+link .icons ~/.icons
 
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'custom'"
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/custom-local-command "'xdg-terminal-exec'"
+
 
 echo "Configuring Discord to skip host update..."
 if [ -f ~/.config/discord/settings.json ]; then
