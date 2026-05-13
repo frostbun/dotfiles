@@ -6,6 +6,9 @@ python
 uv
 zsh
 man-db
+nmap
+curl
+wget
 lazygit
 tmux
 parallel
