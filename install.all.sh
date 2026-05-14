@@ -169,6 +169,7 @@ link .icons ~/.icons
 
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'custom'"
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/custom-local-command "'xdg-terminal-exec'"
+dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/custom-remote-command "'xdg-terminal-exec %s'"
 
 
 echo "Configuring Discord to skip host update..."

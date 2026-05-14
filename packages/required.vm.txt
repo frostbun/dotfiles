@@ -20,7 +20,6 @@ meson
 cpio
 go
 python
-uv
 bat-extras
 git-lfs
 docker
