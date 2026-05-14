@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 echo "Backing up settings..."
 dconf dump /org/gnome/shell/ > dconf/shell.dconf

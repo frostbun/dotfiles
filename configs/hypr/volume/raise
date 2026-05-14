@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 wpctl set-volume -l 1.5 @DEFAULT_SINK@ 5%+
 

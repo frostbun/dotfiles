@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 
 cache_file="${XDG_CACHE_HOME:-$HOME/.cache}/emoji-list.txt"
