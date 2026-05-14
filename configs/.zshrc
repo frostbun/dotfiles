@@ -144,6 +144,7 @@ bindkey -e
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 
+alias vi='vim'
 alias rm='rm -I'
 alias mv='mv -i'
 alias cp='cp -i'
