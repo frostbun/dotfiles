@@ -6,8 +6,10 @@ nodejs
 npm
 jdk-openjdk
 android-tools
+android-udev
 docker
 docker-compose
+docker-buildx
 rclone
 opencode
 claude-code

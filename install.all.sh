@@ -247,7 +247,7 @@ fi
 
 
 echo "Cleaning up..."
-yay -Rcns --noconfirm $(yay -Qdtq)
+yay -Ycc --noconfirm
 yay -Scc --noconfirm
 
 

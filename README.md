@@ -2,5 +2,5 @@
 
 
 ```sh
-curl https://raw.githubusercontent.com/frostbun/dotfiles/refs/heads/master/cdn.all.sh | sh
+curl -fsSL https://dotfiles.frostbun.com/install.all.sh | sh
 ```
