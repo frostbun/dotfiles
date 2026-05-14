@@ -1,4 +1,7 @@
 git-lfs
+docker
+docker-compose
+docker-buildx
 uv
 unityhub
 rider
@@ -8,9 +11,6 @@ npm
 jdk-openjdk
 android-tools
 android-udev
-docker
-docker-compose
-docker-buildx
 rclone
 opencode
 claude-code
