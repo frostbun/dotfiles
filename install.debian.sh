@@ -14,6 +14,7 @@ sudo apt install -y $(cat packages/required.debian.txt)
 curl -fsSL https://opencode.ai/install | bash
 curl -fsSL https://claude.ai/install.sh | bash
 
+
 echo "Enabling required services..."
 sudo systemctl enable --now sshd.service
 sudo systemctl enable --now docker.service
