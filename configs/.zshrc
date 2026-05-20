@@ -142,7 +142,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
 
 alias vi='vim'
 alias rm='rm -I'

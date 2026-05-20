@@ -154,7 +154,6 @@ fi
 
 echo "Creating symlinks for dotfiles..."
 link systemd ~/.config/systemd
-link .bin ~/.bin
 link .gitconfig ~/.gitconfig
 link lazygit ~/.config/lazygit
 link bat ~/.config/bat

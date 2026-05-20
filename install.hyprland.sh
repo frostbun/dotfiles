@@ -10,7 +10,7 @@ install < packages/hyprland.txt
 
 echo "Installing Hyprland plugins..."
 hyprpm update
-hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm add https://github.com/colonelpanic8/hyprexpo
 hyprpm enable hyprexpo
 
 
