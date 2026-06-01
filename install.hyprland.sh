@@ -11,7 +11,11 @@ install < packages/hyprland.txt
 echo "Installing Hyprland plugins..."
 hyprpm update
 hyprpm add https://github.com/colonelpanic8/hyprexpo
+hyprpm add https://github.com/KZDKM/Hyprspace
+hyprpm add https://github.com/VirtCode/hypr-dynamic-cursors
 hyprpm enable hyprexpo
+hyprpm enable Hyprspace
+hyprpm enable dynamic-cursors
 
 
 if prompt "Fetch emoji list"; then
