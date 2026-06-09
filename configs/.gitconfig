@@ -28,5 +28,6 @@
     addEmptyPathspec = false
     skippedCherryPicks = false
     addIgnoredFile = false
+	forceDeleteBranch = false
 [credential]
     helper = /usr/lib/git-core/git-credential-libsecret
