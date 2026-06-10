@@ -11,7 +11,7 @@
 [pull]
     ff = only
 [alias]
-    yike = "!git submodule foreach --quiet pwd | parallel -j 8 'git -C {} fetch --quiet -p && git -C {} pull --quiet && echo -e \"\\e[32m$(basename {})\\e[0m - $(git -C {} log -1 --format=\"\\e[31m%h\\e[0m - %B\")\"'"
+    yike = "!git submodule foreach --quiet pwd | parallel -j 8 'git -C {} fetch --quiet -p && git -C {} pull --quiet && echo -e \"\\e[32m$(basename {})\\e[0m - $(git -C {} log -1 --format=\"\\e[31m%h\\e[0m - %s\")\"'"
     release = "!f() { git tag -a \"v$1\" -m \"$1\"; }; f"
     lazy = "!lazygit"
     frp = "!git fetch && git rebase && git push"
