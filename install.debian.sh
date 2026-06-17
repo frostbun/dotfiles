@@ -25,7 +25,9 @@ sudo usermod -aG docker $USER
 if [ ! -d ~/.oh-my-zsh ]; then
     echo "Installing Oh My Zsh..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    touch configs/.zshrc.local
     link .zshrc ~/.zshrc
+    link .zshrc.local ~/.zshrc.local
 fi
 
 
