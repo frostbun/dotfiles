@@ -65,3 +65,8 @@ white = "#c0caf5"
 [colors.hints]
 start = { foreground = "#1a1b26", background = "#e0af68" }
 end = { foreground = "#1a1b26", background = "#e0af68" }
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
