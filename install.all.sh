@@ -133,7 +133,6 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     link .vimrc ~/.vimrc
     vim +PluginInstall +qall
-    ~/.vim/bundle/youcompleteme/install.py
 
     sudo rm -rf /root/.vim
     sudo rm -f /root/.vimrc
