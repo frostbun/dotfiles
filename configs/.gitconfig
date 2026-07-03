@@ -15,7 +15,7 @@
     release = "!f() { git tag -a \"v$1\" -m \"$1\"; }; f"
     lazy = "!lazygit"
     fr = "!git fetch && git stash save && git rebase && git stash pop"
-    frp = "!git fetch && git stash save && git rebase && git push && git stash pop"
+    frp = "!git fetch && git stash save && git rebase && git stash pop && git push"
 [core]
     editor = vim
     autocrlf = input

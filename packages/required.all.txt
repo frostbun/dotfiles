@@ -54,3 +54,4 @@ visual-studio-code-bin
 nautilus-open-any-terminal
 nautilus-admin-gtk4
 nautilus-code
+nm-connection-editor
