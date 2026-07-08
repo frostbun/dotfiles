@@ -9,7 +9,7 @@ name=$(echo "$active" | jq -r ".name")
 current=${name#"$id"}
 current=${current#-}
 
-new=$(wofi -d -p "Rename workspace:" -Q "$current")
+new=$(wofi --dmenu --search="$current" --lines=1 --cache-file=/dev/null)
 
 [ $? -ne 0 ] && exit 0
 

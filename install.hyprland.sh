@@ -28,7 +28,6 @@ echo "Creating symlinks for dotfiles..."
 [ ! -f $dotfiles/configs/hypr/hyprland/custom/custom.conf ] && touch $dotfiles/configs/hypr/hyprland/custom/custom.conf
 link hypr ~/.config/hypr
 link waybar ~/.config/waybar
-link wofi ~/.config/wofi
 link dunst ~/.config/dunst
 
 

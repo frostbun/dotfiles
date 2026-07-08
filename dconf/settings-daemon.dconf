@@ -21,7 +21,7 @@ name='btop'
 
 [plugins/media-keys/custom-keybindings/custom2]
 binding='<Super>Return'
-command='wofi'
+command='wofi --show=drun --prompt=run'
 name='wofi'
 
 [plugins/media-keys/custom-keybindings/custom3]

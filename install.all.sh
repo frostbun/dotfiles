@@ -166,6 +166,7 @@ link fcitx5 ~/.config/fcitx5
 link kitty ~/.config/kitty
 link alacritty ~/.config/alacritty
 link .icons ~/.icons
+link wofi ~/.config/wofi
 
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'custom'"
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/custom-local-command "'xdg-terminal-exec'"
