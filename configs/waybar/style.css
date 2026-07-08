@@ -23,12 +23,6 @@
     color: @foreground;
 }
 
-#workspaces {
-    border: 2px solid @purple;
-    border-radius: 4px;
-    margin: 8px 4px;
-}
-
 #workspaces button {
     border-radius: 0px;
     padding: 0 5px;
@@ -40,10 +34,6 @@
 
 #workspaces button:first-child {
     border-left: none;
-}
-
-#workspaces button:last-child {
-    border-right: none;
 }
 
 #workspaces button:hover {
@@ -83,6 +73,7 @@
     padding: 0 4px;
 }
 
+#custom-new-workspace:hover,
 #custom-player:hover,
 #clock:hover,
 #custom-notification:hover,
@@ -97,6 +88,7 @@
     background: @selection;
 }
 
+#workspaces,
 #network,
 #cpu,
 #temperature.cpu {
@@ -107,6 +99,7 @@
     padding: 0 4px;
 }
 
+#custom-new-workspace,
 #custom-vpn,
 #memory,
 #temperature.gpu {
@@ -115,6 +108,14 @@
     border-radius: 0 4px 4px 0;
     margin: 8px 4px 8px 0;
     padding: 0 4px;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+#custom-new-workspace {
+    border-left: 1px solid @purple;
 }
 
 #waybar .modules-left>widget:first-child>* {
