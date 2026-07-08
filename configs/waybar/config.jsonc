@@ -22,6 +22,8 @@
     "custom/vpn",
     "cpu",
     "memory",
+    // "temperature#cpu",
+    // "temperature#gpu",
     "battery"
   ],
   "hyprland/workspaces": {
