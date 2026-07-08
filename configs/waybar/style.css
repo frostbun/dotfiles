@@ -31,9 +31,19 @@
 
 #workspaces button {
     border-radius: 0px;
-    padding: 0 4px;
+    padding: 0 5px;
+    border-left: 1px solid @purple;
+    border-right: 1px solid @purple;
     background: @background;
     color: @foreground;
+}
+
+#workspaces button:first-child {
+    border-left: none;
+}
+
+#workspaces button:last-child {
+    border-right: none;
 }
 
 #workspaces button:hover {

@@ -74,9 +74,9 @@
       ]
     },
     "on-click": "pavucontrol",
-    "on-click-right": "~/.config/hypr/volume/mute",
-    "on-scroll-up": "~/.config/hypr/volume/raise",
-    "on-scroll-down": "~/.config/hypr/volume/lower",
+    "on-click-right": "~/.config/hypr/scripts/volume/mute",
+    "on-scroll-up": "~/.config/hypr/scripts/volume/raise",
+    "on-scroll-down": "~/.config/hypr/scripts/volume/lower",
     "on-click-middle": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
   },
   "bluetooth": {

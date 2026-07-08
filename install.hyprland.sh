@@ -19,7 +19,7 @@ hyprpm enable dynamic-cursors
 
 
 if prompt "Fetch emoji list"; then
-    ./configs/wofi/emoji-fetch
+    ~/.config/hypr/scripts/clipboard/emoji-fetch
 fi
 
 

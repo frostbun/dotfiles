@@ -5,7 +5,7 @@ cache_file="${XDG_CACHE_HOME:-$HOME/.cache}/emoji-list.txt"
 
 
 if [ ! -f "$cache_file" ] || [ "$(find "$cache_file" -mmin +43200 -print -quit)" ]; then
-    ./emoji-fetch
+    ~/.config/hypr/scripts/clipboard/emoji-fetch
 fi
 
 
