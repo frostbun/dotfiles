@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-# Keep track of workspaces we have made persistent so we can clean up properly
 PREVIOUS_PERSISTENT=()
 
 handle() {
     case $1 in
-        workspacev2*|openwindow*|closewindow*)
+        workspacev2*|openwindow*|closewindow*|movewindowv2*)
+            
             # 1. Find the highest workspace ID that actually has windows
             max_active_ws=$(hyprctl workspaces -j | jq '[.[] | select(.windows > 0) | .id] | max // 1')
             
-            # 2. Your target range is from 1 all the way to (max_active_ws + 1)
+            # 2. Target range is from 1 all the way to (max_active_ws + 1)
             limit=$((max_active_ws + 1))
             
             # 3. Build a list of workspaces that SHOULD be persistent right now
@@ -19,7 +19,6 @@ handle() {
             done
             
             # 4. Clean up workspaces that are no longer in our target range
-            # (e.g., if you close the window on 5, workspace 6 should lose persistence)
             for old_ws in "${PREVIOUS_PERSISTENT[@]}"; do
                 if [[ ! " ${CURRENT_PERSISTENT[*]} " =~ " ${old_ws} " ]]; then
                     hyprctl keyword workspace "${old_ws},persistent:false" > /dev/null
