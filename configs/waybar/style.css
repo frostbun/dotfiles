@@ -24,7 +24,7 @@
 }
 
 #workspaces button {
-    border-radius: 0px;
+    border-radius: 0;
     padding: 0 5px;
     border-left: 1px solid @purple;
     border-right: 1px solid @purple;
@@ -33,7 +33,13 @@
 }
 
 #workspaces button:first-child {
+    padding: 0 4px;
     border-left: none;
+}
+
+#workspaces button:last-child {
+    padding: 0 4px;
+    border-right: none;
 }
 
 #workspaces button:hover {
@@ -61,6 +67,7 @@
     background: @selection;
 }
 
+#workspaces,
 #custom-player,
 #custom-notification,
 #tray,
@@ -73,7 +80,10 @@
     padding: 0 4px;
 }
 
-#custom-new-workspace:hover,
+#workspaces {
+    padding: 0;
+}
+
 #custom-player:hover,
 #clock:hover,
 #custom-notification:hover,
@@ -88,7 +98,6 @@
     background: @selection;
 }
 
-#workspaces,
 #network,
 #cpu,
 #temperature.cpu {
@@ -99,7 +108,6 @@
     padding: 0 4px;
 }
 
-#custom-new-workspace,
 #custom-vpn,
 #memory,
 #temperature.gpu {
@@ -108,14 +116,6 @@
     border-radius: 0 4px 4px 0;
     margin: 8px 4px 8px 0;
     padding: 0 4px;
-}
-
-#workspaces {
-    padding: 0;
-}
-
-#custom-new-workspace {
-    border-left: 1px solid @purple;
 }
 
 #waybar .modules-left>widget:first-child>* {

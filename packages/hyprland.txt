@@ -21,3 +21,4 @@ gnome-font-viewer
 gnome-characters
 gnome-logs
 xdg-desktop-portal-gtk
+socat

@@ -8,7 +8,6 @@
   "margin-bottom": 0,
   "modules-left": [
     "hyprland/workspaces",
-    "custom/new-workspace",
     "custom/player",
     "hyprland/window"
   ],
@@ -30,11 +29,6 @@
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace m-1",
     "on-scroll-down": "hyprctl dispatch workspace m+1"
-  },
-  "custom/new-workspace": {
-    "format": "+",
-    "tooltip": "Create new workspace",
-    "on-click": "hyprctl dispatch workspace empty"
   },
   "custom/player": {
     "interval": 1,
