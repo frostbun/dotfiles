@@ -29,5 +29,7 @@
     skippedCherryPicks = false
     addIgnoredFile = false
 	forceDeleteBranch = false
+    mergeConflict = false
+    submoduleMergeConflict = false
 [credential]
     helper = /usr/lib/git-core/git-credential-libsecret
