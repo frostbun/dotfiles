@@ -12,6 +12,7 @@
     ff = only
 [alias]
     yike = "!git submodule foreach --quiet pwd | parallel 'echo -ne \"\\e[32m$(basename {})\\e[0m - \" && git -C {} fetch -p --quiet && git -C {} pull --quiet && git -C {} log -1 --color=always --format=\"%Cred%h%Creset - %s\"'"
+    yeet = "!git branch | grep -v \"^\\*\" | grep -v \"^+\" | xargs git branch -d || true"
     release = "!f() { git tag -a \"v$1\" -m \"$1\"; }; f"
     lazy = "!lazygit"
     fr = "!git fetch && git stash save && git rebase && git stash pop"
