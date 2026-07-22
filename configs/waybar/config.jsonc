@@ -33,8 +33,8 @@
   "custom/player": {
     "interval": 1,
     "format": "{}",
-    "exec": "echo \"$([ $(playerctl status) = Playing ] && echo  || echo ) $(playerctl metadata --format '{{title}} - {{artist}}')\"",
-    "exec-if": "[ $(playerctl status) = Playing ] || [ $(playerctl status) = Paused ]",
+    "exec": "echo \"$([[ $(playerctl status) = Playing ]] && echo  || echo ) $(playerctl metadata --format '{{title}} - {{artist}}')\"",
+    "exec-if": "[[ $(playerctl status) = Playing ]] || [[ $(playerctl status) = Paused ]]",
     "escape": true,
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
@@ -54,7 +54,7 @@
   "custom/notification": {
     "interval": 1,
     "format": "{}",
-    "exec": "echo \"$([ $(dunstctl is-paused) = false ] && echo \" \" || echo \" \")$(($(dunstctl count history)+$(dunstctl count waiting)))\"",
+    "exec": "echo \"$([[ $(dunstctl is-paused) = false ]] && echo \" \" || echo \" \")$(($(dunstctl count history)+$(dunstctl count waiting)))\"",
     "on-click": "dunstctl set-paused toggle"
   },
   "tray": {
