@@ -1,0 +1,31 @@
+[Unit]
+Description=Rclone auto mount for %i
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Environment="DIR_CACHE_TIME=5m"
+Environment="ATTR_TIMEOUT=1s"
+EnvironmentFile=-%E/rclone/%i.env
+
+ExecStartPre=-/usr/bin/mkdir -p %h/rclone/%i
+ExecStartPre=-/usr/bin/fusermount -u %h/rclone/%i
+
+ExecStart=/usr/bin/rclone mount %i: %h/rclone/%i \
+    --config=%E/rclone/rclone.conf \
+    --vfs-cache-mode full \
+    --vfs-cache-max-age 30d \
+    --vfs-cache-max-size 16G \
+    --vfs-read-ahead 256M \
+    --dir-cache-time ${DIR_CACHE_TIME} \
+    --attr-timeout ${ATTR_TIMEOUT} \
+    --no-checksum \
+    --no-modtime
+
+ExecStop=-/usr/bin/fusermount -u %h/rclone/%i
+ExecStopPost=-/usr/bin/rmdir %h/rclone/%i
+
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

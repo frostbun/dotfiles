@@ -1,0 +1,10 @@
+figlet
+fortune-mod
+cowsay
+lolcat
+cmatrix
+pipes.sh
+sl
+asciiquarium
+cbonsai
+tty-clock

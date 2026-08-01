@@ -1,0 +1,8 @@
+insensitive=true
+close_on_focus_loss=true
+allow_images=true
+image_size=64
+hide_scroll=true
+width=33%
+height=50%
+key_expand=Tab

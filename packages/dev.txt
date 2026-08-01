@@ -1,0 +1,15 @@
+git-lfs
+docker
+docker-compose
+docker-buildx
+uv
+unityhub
+dotnet-sdk
+nodejs
+npm
+jdk-openjdk
+android-tools
+android-udev
+rclone
+opencode
+claude-code
