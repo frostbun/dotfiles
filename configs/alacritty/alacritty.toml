@@ -4,7 +4,6 @@ size = 16.0
 
 [cursor]
 style = { shape = "Beam", blinking = "Off" }
-unfocused_hollow = false
 
 [window]
 decorations = "None"
