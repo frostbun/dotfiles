@@ -95,7 +95,6 @@ link lazygit ~/.config/lazygit
 link bat ~/.config/bat
 link btop ~/.config/btop
 link fastfetch ~/.config/fastfetch
-link ranger ~/.config/ranger
 link opencode ~/.config/opencode
 
 

@@ -6,7 +6,7 @@ hl.config({
 })
 
 hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("loginctl lock-session"))
-hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("xdg-terminal-exec btop"))
+hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("xdg-terminal-exec btop", { float = true }))
 
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("wofi --show=drun --prompt=run"))
 hl.bind("SUPER + Escape", hl.dsp.window.close())
@@ -15,17 +15,18 @@ hl.bind("F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle"
 
 hl.bind("SUPER + W", hl.dsp.exec_cmd("~/.config/hypr/scripts/workspace/rename"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("nautilus"))
+hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd("xdg-terminal-exec yazi", { float = true }))
 hl.bind("SUPER + R", hl.dsp.exec_cmd("xdg-terminal-exec"))
 hl.bind("SUPER + T", hl.dsp.exec_cmd("google-chrome-stable"))
 
 hl.bind("SUPER + A", hl.dsp.exec_cmd("pidof hyprpicker || hyprpicker --render-inactive --autocopy"))
 hl.bind("SUPER + S", hl.dsp.exec_cmd("pidof hyprpicker || hyprshot --mode=active --mode=window --output-folder=$HOME/Pictures/Screenshots"))
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("pidof hyprpicker || hyprshot --mode=region --freeze --output-folder=$HOME/Pictures/Screenshots"))
 hl.bind("SUPER + F", hl.dsp.window.float({ action = "toggle" }))
 -- hl.bind("SUPER + G", hl.dsp.layout("togglesplit"))
 hl.bind("SUPER + G", hl.dsp.layout("swapwithmaster"))
 
 hl.bind("Print", hl.dsp.exec_cmd("pidof hyprpicker || hyprshot --mode=active --mode=output --output-folder=$HOME/Pictures/Screenshots"))
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("pidof hyprpicker || hyprshot --mode=region --freeze --output-folder=$HOME/Pictures/Screenshots"))
 
 hl.bind("SUPER + Z", hl.dsp.exec_cmd("code ~/dotfiles"))
 hl.bind("SUPER + X", hl.dsp.exec_cmd("wl-paste | swappy -f -"))

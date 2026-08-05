@@ -9,9 +9,9 @@ bat
 ripgrep
 fzf
 jq
-trash-cli
 btop
-ranger
+yazi
+ttf-jetbrains-mono-nerd
 fastfetch
 fd
 openssh
@@ -24,7 +24,6 @@ bat-extras
 nmap
 google-chrome
 discord
-kitty
 alacritty
 cava
 cloudflared
@@ -33,7 +32,6 @@ libreoffice-still
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
-ttf-jetbrains-mono-nerd
 fcitx5
 fcitx5-qt
 fcitx5-gtk

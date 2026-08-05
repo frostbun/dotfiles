@@ -139,10 +139,8 @@ link lazygit ~/.config/lazygit
 link bat ~/.config/bat
 link btop ~/.config/btop
 link fastfetch ~/.config/fastfetch
-link ranger ~/.config/ranger
 link cava ~/.config/cava
 link fcitx5 ~/.config/fcitx5
-link kitty ~/.config/kitty
 link alacritty ~/.config/alacritty
 link .icons ~/.icons
 link wofi ~/.config/wofi

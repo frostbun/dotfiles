@@ -3,6 +3,10 @@
 source ./common.sh
 
 
+curl -fsSL https://yazi-rs.github.io/builds/yazi-keyring.gpg | sudo tee /usr/share/keyrings/yazi-keyring.gpg >/dev/null
+echo 'deb [signed-by=/usr/share/keyrings/yazi-keyring.gpg] https://yazi-rs.github.io/builds/ stable main' | sudo tee /etc/apt/sources.list.d/yazi.list >/dev/null
+
+
 echo "Updating system..."
 sudo apt update
 sudo apt upgrade
@@ -44,7 +48,6 @@ link lazygit ~/.config/lazygit
 link bat ~/.config/bat
 link btop ~/.config/btop
 link fastfetch ~/.config/fastfetch
-link ranger ~/.config/ranger
 link opencode ~/.config/opencode
 
 

@@ -9,9 +9,8 @@ bat
 ripgrep
 fzf
 jq
-trash-cli
 btop
-ranger
+yazi
 fastfetch
 fd-find
 ssh
