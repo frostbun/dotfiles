@@ -11,6 +11,7 @@ fzf
 jq
 btop
 yazi
+ffmpeg
 fastfetch
 fd-find
 ssh
