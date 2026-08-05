@@ -33,7 +33,7 @@ cd waydroid_script
 python -m venv venv
 venv/bin/pip install -r requirements.txt
 
-sudo venv/bin/python main.py install libhoudini
+sudo venv/bin/python main.py install libndk
 sudo venv/bin/python main.py install gapps
 
 read -p "Open Waydroid & press [Enter] to continue..."
