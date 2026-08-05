@@ -142,6 +142,7 @@ link fastfetch ~/.config/fastfetch
 link cava ~/.config/cava
 link fcitx5 ~/.config/fcitx5
 link alacritty ~/.config/alacritty
+link kitty ~/.config/kitty
 link .icons ~/.icons
 link wofi ~/.config/wofi
 

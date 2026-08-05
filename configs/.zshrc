@@ -134,4 +134,13 @@ alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias rg='rg -S'
 
+if [[ $TERM == "xterm-kitty" ]]; then
+  alias ssh='kitten ssh'
+  alias copy='kitten clipboard'
+  alias paste='kitten clipboard -g'
+else
+  alias copy='wl-copy'
+  alias paste='wl-paste'
+fi
+
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

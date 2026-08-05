@@ -25,6 +25,7 @@ nmap
 google-chrome
 discord
 alacritty
+kitty
 cava
 cloudflared
 speedtest-cli
