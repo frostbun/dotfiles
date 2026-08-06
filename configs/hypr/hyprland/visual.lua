@@ -30,9 +30,6 @@ hl.config({
             passes = 3,
         },
     },
-    animations = {
-        enabled = true,
-    },
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
