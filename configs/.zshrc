@@ -1,9 +1,9 @@
 quote() {
-  case $((RANDOM % 3)) in
-    0) figlet "$(whoami)" | lolcat ;;
-    1) cowsay -f $(ls /usr/share/cowsay/cows | shuf -n1 --random-source=/dev/urandom) "$(fortune -s)" | lolcat ;;
-    2) cowthink -f $(ls /usr/share/cowsay/cows | shuf -n1 --random-source=/dev/urandom) "$(fortune -s)" | lolcat ;;
-  esac
+    case $((RANDOM % 3)) in
+        0) figlet "$(whoami)" | lolcat ;;
+        1) cowsay -f $(ls /usr/share/cowsay/cows | shuf -n1 --random-source=/dev/urandom) "$(fortune -s)" | lolcat ;;
+        2) cowthink -f $(ls /usr/share/cowsay/cows | shuf -n1 --random-source=/dev/urandom) "$(fortune -s)" | lolcat ;;
+    esac
 }
 
 fastfetch 2>/dev/null
@@ -13,7 +13,7 @@ fastfetch 2>/dev/null
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -135,13 +135,15 @@ alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias rg='rg -S'
 
-if [[ $TERM == "xterm-kitty" ]] && [[ ! -n $SSH_CLIENT ]]; then
-  alias ssh='kitten ssh'
-  alias copy='kitten clipboard'
-  alias paste='kitten clipboard -g'
+if [[ $TERM == 'xterm-kitty' ]] && command -v kitten &> /dev/null; then
+    alias copy='kitten clipboard'
+    alias paste='kitten clipboard -g'
+    if  [[ ! -n $SSH_CLIENT ]]; then
+        alias ssh='kitten ssh'
+    fi
 else
-  alias copy='wl-copy'
-  alias paste='wl-paste'
+    alias copy='wl-copy'
+    alias paste='wl-paste'
 fi
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
