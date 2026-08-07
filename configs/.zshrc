@@ -135,7 +135,7 @@ alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias rg='rg -S'
 
-if [[ $TERM == "xterm-kitty" ]]; then
+if [[ $TERM == "xterm-kitty" ]] && [[ ! -n $SSH_CLIENT ]]; then
   alias ssh='kitten ssh'
   alias copy='kitten clipboard'
   alias paste='kitten clipboard -g'
