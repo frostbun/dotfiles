@@ -10,6 +10,7 @@ hl.config({
             nogroup_border_active = "rgb(bd93f9)",
         },
         layout = layout,
+        resize_on_border = true
     },
     dwindle = {
         preserve_split = true,

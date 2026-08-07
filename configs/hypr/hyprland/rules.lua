@@ -1,10 +1,3 @@
-hl.monitor({
-    output = "",
-    mode = "preferred",
-    position = "auto",
-    scale = "1",
-})
-
 -- Ignore maximize requests from apps. You'll probably like this.
 hl.window_rule({
     match = {
