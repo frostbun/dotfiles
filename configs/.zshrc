@@ -128,6 +128,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
+alias ls='eza --icons'
 alias rm='rm -I'
 alias mv='mv -i'
 alias cp='cp -i'

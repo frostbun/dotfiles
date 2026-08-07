@@ -8,6 +8,7 @@ parallel
 bat
 ripgrep
 fzf
+eza
 jq
 btop
 yazi

@@ -8,14 +8,15 @@ parallel
 bat
 ripgrep
 fzf
+eza
 jq
 btop
 yazi
 ffmpeg
-ttf-jetbrains-mono-nerd
 fastfetch
 fd
 openssh
+ttf-jetbrains-mono-nerd
 cmake
 meson
 cpio
