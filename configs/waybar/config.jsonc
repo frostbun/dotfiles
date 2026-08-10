@@ -8,13 +8,13 @@
   "margin-bottom": 0,
   "modules-left": [
     "hyprland/workspaces",
-    "custom/player",
     "hyprland/window"
   ],
   "modules-center": [
     "clock"
   ],
   "modules-right": [
+    "custom/player",
     "custom/notification",
     "pulseaudio",
     "bluetooth",
