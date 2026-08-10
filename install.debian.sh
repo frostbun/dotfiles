@@ -21,9 +21,6 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 echo "Enabling required services..."
 sudo systemctl enable --now ssh.service
-sudo systemctl enable --now docker.service
-
-sudo usermod -aG docker $USER
 
 
 if prompt "Install Zsh"; then

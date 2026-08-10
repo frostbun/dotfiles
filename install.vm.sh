@@ -68,9 +68,6 @@ install < packages/required.vm.txt
 
 echo "Enabling required services..."
 sudo systemctl enable --now sshd.service
-sudo systemctl enable --now docker.service
-
-sudo usermod -aG docker $USER
 
 
 if prompt "Install Zsh"; then

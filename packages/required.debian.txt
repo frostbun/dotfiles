@@ -17,7 +17,6 @@ fastfetch
 fd-find
 ssh
 git-lfs
-docker.io
-docker-cli
-docker-compose
-docker-buildx
+podman
+podman-compose
+podman-docker
