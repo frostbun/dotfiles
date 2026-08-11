@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-wpctl set-mute @DEFAULT_SINK@ toggle
-
-~/.config/hypr/scripts/volume/notify.sh

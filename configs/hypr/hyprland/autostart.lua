@@ -1,7 +1,3 @@
 hl.on("hyprland.start", function()
-    hl.exec_cmd("systemctl --user start hyprpaper")
-    hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("systemctl --user start hypridle")
-    hl.exec_cmd("systemctl --user start waybar")
-    hl.exec_cmd("systemctl --user start cliphist")
+    hl.exec_cmd("noctalia")
 end)

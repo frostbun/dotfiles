@@ -8,17 +8,10 @@ yay -Rcns --noconfirm $(comm -12 <(yay -Qq | sort) <(sort packages/hyprland.bloa
 install < packages/hyprland.txt
 
 
-if prompt "Fetch emoji list"; then
-    ~/.config/hypr/scripts/clipboard/emoji-fetch.sh
-fi
-
-
 echo "Creating symlinks for dotfiles..."
 [ ! -d $dotfiles/configs/hypr/hyprland/custom ] && mkdir -p $dotfiles/configs/hypr/hyprland/custom
-[ ! -f $dotfiles/configs/hypr/hyprland/custom/custom.conf ] && touch $dotfiles/configs/hypr/hyprland/custom/custom.conf
+[ ! -f $dotfiles/configs/hypr/hyprland/custom/custom.lua ] && touch $dotfiles/configs/hypr/hyprland/custom/custom.lua
 link hypr ~/.config/hypr
-link waybar ~/.config/waybar
-link dunst ~/.config/dunst
 
 
 dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"

@@ -17,13 +17,13 @@ hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("loginctl lock-session"))
 hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("xdg-terminal-exec btop", { float = true }))
 
 
-hl.bind("SUPER + Return", hl.dsp.exec_cmd("wofi --show=drun --prompt=run"))
+hl.bind("SUPER + Return", hl.dsp.exec_cmd("noctalia msg panel-open launcher"))
 hl.bind("SUPER + Escape", hl.dsp.window.close())
 hl.bind("SUPER + SHIFT + Escape", hl.dsp.window.kill())
 hl.bind("F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 
-hl.bind("SUPER + W", hl.dsp.exec_cmd("~/.config/hypr/scripts/workspace/rename.sh"))
+hl.bind("SUPER + W", hl.dsp.exec_cmd("noctalia msg window-switcher"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("nautilus"))
 hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd("xdg-terminal-exec yazi", { float = true }))
 hl.bind("SUPER + R", hl.dsp.exec_cmd("xdg-terminal-exec"))
@@ -32,8 +32,9 @@ hl.bind("SUPER + T", hl.dsp.exec_cmd("google-chrome-stable"))
 
 hl.bind("SUPER + A", hl.dsp.exec_cmd("pidof hyprpicker || hyprpicker --render-inactive --autocopy"))
 hl.bind("SUPER + S", hl.dsp.exec_cmd("pidof hyprpicker || hyprshot --mode=active --mode=window --output-folder=$HOME/Pictures/Screenshots"))
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("pidof hyprpicker || hyprshot --mode=region --freeze --output-folder=$HOME/Pictures/Screenshots"))
-hl.bind("Print", hl.dsp.exec_cmd("pidof hyprpicker || hyprshot --mode=active --mode=output --output-folder=$HOME/Pictures/Screenshots"))
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
+hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"))
+hl.bind("SUPER + D", hl.dsp.exec_cmd("noctalia msg panel-open launcher /win"))
 hl.bind("SUPER + F", hl.dsp.window.float({ action = "toggle" }))
 
 if layout == "dwindle" then
@@ -43,10 +44,11 @@ else
 end
 
 
-hl.bind("SUPER + Z", hl.dsp.exec_cmd("code ~/dotfiles"))
+hl.bind("SUPER + Z", hl.dsp.exec_cmd("noctalia msg settings-open"))
+hl.bind("SUPER + SHIFT + Z", hl.dsp.exec_cmd("code ~/dotfiles"))
 hl.bind("SUPER + X", hl.dsp.exec_cmd("wl-paste | swappy -f -"))
-hl.bind("SUPER + V", hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboard/cliphist.sh"))
-hl.bind("SUPER + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboard/emoji.sh"))
+hl.bind("SUPER + V", hl.dsp.exec_cmd("noctalia msg panel-open clipboard"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("noctalia msg panel-open launcher /emo"))
 
 
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ next = false }))
@@ -144,9 +146,9 @@ else
 end
 
 
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/lower.sh"), { locked = true, repeating = true })
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/raise.sh"), { locked = true, repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/mute.sh"), { locked = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_SINK@ 5%-"), { locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_SINK@ 5%+"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_SINK@ toggle"), { locked = true })
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_SOURCE@ toggle"), { locked = true })
 
 
@@ -156,5 +158,5 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 
 
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness/lower.sh"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness/raise.sh"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -n 1 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -n 1 set 5%+"), { locked = true, repeating = true })

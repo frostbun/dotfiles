@@ -29,7 +29,7 @@
     addEmptyPathspec = false
     skippedCherryPicks = false
     addIgnoredFile = false
-	forceDeleteBranch = false
+    forceDeleteBranch = false
     mergeConflict = false
     submoduleMergeConflict = false
 [credential]

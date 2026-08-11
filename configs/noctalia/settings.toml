@@ -1,0 +1,110 @@
+[accessibility]
+ui_scale = 1.25
+
+[audio]
+enable_overdrive = true
+
+[bar.default]
+border = "primary"
+border_width = 2.0
+concave_edge_corners = false
+font_family = "JetBrainsMono Nerd Font"
+margin_edge = 8
+margin_ends = 8
+radius = 8
+scale = 1.5
+start = ["control-center", "workspaces", "spacer", "active_window"]
+center = ["clock", "notifications"]
+end = [
+    "audio_visualizer",
+    "media",
+    "spacer",
+    "tray",
+    "spacer",
+    "network",
+    "bluetooth",
+    "spacer",
+    "volume",
+    "brightness",
+    "spacer",
+    "cpu",
+    "ram",
+    "battery",
+    "spacer",
+    "session",
+]
+thickness = 42
+
+[lockscreen]
+blurred_desktop = true
+
+[shell]
+polkit_agent = true
+time_format = "{:%a %b %d %I:%M:%S %p}"
+
+[shell.screenshot]
+directory = "/home/frostbun/Pictures/Screenshots"
+
+[idle]
+pre_action_fade_seconds = 30
+
+[idle.behavior.lock]
+action = "lock"
+enabled = true
+timeout = 300.0
+
+[idle.behavior.screen-off]
+action = "screen_off"
+enabled = true
+timeout = 330.0
+
+[notification]
+position = "top_center"
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[theme.templates]
+builtin_ids = ["alacritty", "btop", "cava", "hyprland", "kitty"]
+community_ids = [
+    "opencode",
+    "discord",
+    "blender",
+    "darktable",
+    "gimp",
+    "libreoffice",
+    "vscode",
+    "steam",
+    "fastfetch",
+    "obs",
+    "bat",
+    "lazygit",
+    "yazi",
+]
+
+[wallpaper.default]
+path = "/home/frostbun/.config/background"
+
+[wallpaper.last]
+path = "/home/frostbun/.config/background"
+
+[widget.audio_visualizer]
+color_2 = "secondary"
+
+[widget.clock]
+format = "{:%a %b %d %I:%M:%S %p}"
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+[widget.cpu]
+display = "text"
+
+[widget.ram]
+display = "text"
+stat = "ram_pct"

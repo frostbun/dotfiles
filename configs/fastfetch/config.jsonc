@@ -1,7 +1,11 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
-    "type": "small"
+    "type": "small",
+    "color": {
+      "1": "#63a2f7",
+      "2": "#bb63f7"
+    }
   },
   "modules": [
     "title",
@@ -11,5 +15,18 @@
     "memory",
     "shell",
     "terminal"
-  ]
+  ],
+  "display": {
+    "color": {
+      "keys": "#7aa2f7",
+      "title": "#bb9af7"
+    },
+    "percent": {
+      "color": {
+        "green": "#9ece6a",
+        "yellow": "#87abf8",
+        "red": "#f7768e"
+      }
+    }
+  }
 }

@@ -1,15 +1,8 @@
-hyprpaper
+noctalia
 hyprpicker
-hypridle
-hyprlock
-hyprpolkitagent
 hyprshot
 swappy
 wl-clipboard
-cliphist
-waybar
-pavucontrol
-blueman
 nautilus
 decibels
 totem
@@ -21,4 +14,3 @@ gnome-font-viewer
 gnome-characters
 gnome-logs
 xdg-desktop-portal-gtk
-socat

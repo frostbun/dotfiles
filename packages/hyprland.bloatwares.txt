@@ -1,2 +1,4 @@
+dunst
 dolphin
+wofi
 polkit-kde-agent

@@ -139,6 +139,7 @@ link lazygit ~/.config/lazygit
 link bat ~/.config/bat
 link btop ~/.config/btop
 link fastfetch ~/.config/fastfetch
+link yazi ~/.config/yazi
 link cava ~/.config/cava
 link fcitx5 ~/.config/fcitx5
 link alacritty ~/.config/alacritty

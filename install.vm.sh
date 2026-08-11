@@ -69,6 +69,9 @@ install < packages/required.vm.txt
 echo "Enabling required services..."
 sudo systemctl enable --now sshd.service
 
+sudo touch /etc/containers/nodocker
+systemctl --user enable --now podman-restart.service
+
 
 if prompt "Install Zsh"; then
     ./install.zsh.sh
@@ -92,6 +95,7 @@ link lazygit ~/.config/lazygit
 link bat ~/.config/bat
 link btop ~/.config/btop
 link fastfetch ~/.config/fastfetch
+link yazi ~/.config/yazi
 link opencode ~/.config/opencode
 
 

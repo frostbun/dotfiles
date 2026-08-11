@@ -21,6 +21,13 @@ hl.window_rule({
 
 hl.window_rule({
     match = {
+        class = "dev.noctalia.Noctalia",
+    },
+    float = true,
+})
+
+hl.window_rule({
+    match = {
         class = "org.pulseaudio.pavucontrol",
     },
     float = true,
