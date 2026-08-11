@@ -7,7 +7,7 @@ name='X-Pardus-Apps.directory'
 translate=true
 
 [app-folders/folders/System]
-apps=['nm-connection-editor.desktop', 'org.gnome.Logs.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.SystemMonitor.desktop']
+apps=['org.gnome.Logs.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.SystemMonitor.desktop']
 name='X-GNOME-Shell-System.directory'
 translate=true
 

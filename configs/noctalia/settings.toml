@@ -6,15 +6,9 @@ enable_overdrive = true
 
 [bar.default]
 border = "primary"
-border_width = 2.0
-concave_edge_corners = false
-font_family = "JetBrainsMono Nerd Font"
-margin_edge = 8
-margin_ends = 8
-radius = 8
-scale = 1.5
-start = ["control-center", "workspaces", "spacer", "active_window"]
+border_width = 2
 center = ["clock", "notifications"]
+concave_edge_corners = false
 end = [
     "audio_visualizer",
     "media",
@@ -33,17 +27,13 @@ end = [
     "spacer",
     "session",
 ]
+font_family = "JetBrainsMono Nerd Font"
+margin_edge = 8
+margin_ends = 8
+radius = 8
+scale = 1.5
+start = ["control-center", "workspaces", "spacer", "active_window"]
 thickness = 42
-
-[lockscreen]
-blurred_desktop = true
-
-[shell]
-polkit_agent = true
-time_format = "{:%a %b %d %I:%M:%S %p}"
-
-[shell.screenshot]
-directory = "/home/frostbun/Pictures/Screenshots"
 
 [idle]
 pre_action_fade_seconds = 30
@@ -51,15 +41,25 @@ pre_action_fade_seconds = 30
 [idle.behavior.lock]
 action = "lock"
 enabled = true
-timeout = 300.0
+timeout = 300
 
 [idle.behavior.screen-off]
 action = "screen_off"
 enabled = true
-timeout = 330.0
+timeout = 330
+
+[lockscreen]
+blurred_desktop = true
 
 [notification]
 position = "top_center"
+
+[shell]
+polkit_agent = true
+time_format = "{:%a %b %d %I:%M:%S %p}"
+
+[shell.screenshot]
+directory = "/home/frostbun/Pictures/Screenshots"
 
 [theme]
 builtin = "Tokyo-Night"
@@ -98,12 +98,12 @@ color_2 = "secondary"
 [widget.clock]
 format = "{:%a %b %d %I:%M:%S %p}"
 
+[widget.cpu]
+display = "text"
+
 [widget.media]
 hide_when_no_media = true
 title_scroll = "on_hover"
-
-[widget.cpu]
-display = "text"
 
 [widget.ram]
 display = "text"
