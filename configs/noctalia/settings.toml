@@ -99,12 +99,12 @@ color_2 = "secondary"
 format = "{:%a %b %d %I:%M:%S %p}"
 
 [widget.cpu]
-display = "text"
+visualization = "none"
 
 [widget.media]
 hide_when_no_media = true
 title_scroll = "on_hover"
 
 [widget.ram]
-display = "text"
 stat = "ram_pct"
+visualization = "none"
