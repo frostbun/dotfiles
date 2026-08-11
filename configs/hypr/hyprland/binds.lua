@@ -23,7 +23,7 @@ hl.bind("SUPER + SHIFT + Escape", hl.dsp.window.kill())
 hl.bind("F11", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 
-hl.bind("SUPER + W", hl.dsp.exec_cmd("~/.config/hypr/scripts/workspace/rename"))
+hl.bind("SUPER + W", hl.dsp.exec_cmd("~/.config/hypr/scripts/workspace/rename.sh"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("nautilus"))
 hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd("xdg-terminal-exec yazi", { float = true }))
 hl.bind("SUPER + R", hl.dsp.exec_cmd("xdg-terminal-exec"))
@@ -45,8 +45,8 @@ end
 
 hl.bind("SUPER + Z", hl.dsp.exec_cmd("code ~/dotfiles"))
 hl.bind("SUPER + X", hl.dsp.exec_cmd("wl-paste | swappy -f -"))
-hl.bind("SUPER + V", hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboard/cliphist"))
-hl.bind("SUPER + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboard/emoji"))
+hl.bind("SUPER + V", hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboard/cliphist.sh"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboard/emoji.sh"))
 
 
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ next = false }))
@@ -144,9 +144,9 @@ else
 end
 
 
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/lower"), { locked = true, repeating = true })
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/raise"), { locked = true, repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/mute"), { locked = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/lower.sh"), { locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/raise.sh"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume/mute.sh"), { locked = true })
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_SOURCE@ toggle"), { locked = true })
 
 
@@ -156,5 +156,5 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 
 
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness/lower"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness/raise"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness/lower.sh"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness/raise.sh"), { locked = true, repeating = true })

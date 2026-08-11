@@ -9,7 +9,7 @@ install < packages/hyprland.txt
 
 
 if prompt "Fetch emoji list"; then
-    ~/.config/hypr/scripts/clipboard/emoji-fetch
+    ~/.config/hypr/scripts/clipboard/emoji-fetch.sh
 fi
 
 
