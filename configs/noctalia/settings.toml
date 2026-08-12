@@ -72,7 +72,6 @@ directory = "/home/frostbun/Pictures/Screenshots"
 
 [theme]
 builtin = "Tokyo-Night"
-source = "builtin"
 
 [theme.templates]
 builtin_ids = ["alacritty", "btop", "cava", "hyprland", "kitty"]
