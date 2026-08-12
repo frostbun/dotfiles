@@ -13,8 +13,6 @@ end = [
     "audio_visualizer",
     "media",
     "spacer",
-    "tray",
-    "spacer",
     "network",
     "bluetooth",
     "spacer",
@@ -32,7 +30,7 @@ margin_edge = 8
 margin_ends = 8
 radius = 8
 scale = 1.5
-start = ["workspaces", "spacer", "active_window"]
+start = ["workspaces", "tray", "active_window"]
 thickness = 42
 
 [bar.default.dead_zone.actions]
@@ -123,3 +121,6 @@ title_scroll = "on_hover"
 [widget.ram]
 stat = "ram_pct"
 visualization = "none"
+
+[widget.tray]
+drawer = true
