@@ -39,7 +39,7 @@ hl.bind("SUPER + F", hl.dsp.window.float({ action = "toggle" }))
 
 if layout == "dwindle" then
     hl.bind("SUPER + G", hl.dsp.layout("togglesplit"))
-else
+elseif layout =="master" then
     hl.bind("SUPER + G", hl.dsp.layout("swapwithmaster"))
 end
 
@@ -50,16 +50,17 @@ hl.bind("SUPER + SHIFT + CTRL + Z", hl.dsp.exec_cmd("code ~/.local/state/noctali
 hl.bind("SUPER + X", hl.dsp.exec_cmd("wl-paste | swappy -f -"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("noctalia msg panel-open clipboard"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("noctalia msg panel-open launcher /emo"))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("noctalia msg panel-open launcher /kao"))
 
 
-hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ next = false }))
+hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ next = true }))
 hl.bind("ALT + Tab", hl.dsp.window.alter_zorder({ mode = "top" }))
 
 if layout == "master" then
     hl.bind("ALT + Tab", hl.dsp.layout("swapwithmaster"))
 end
 
-hl.bind("ALT + SHIFT + Tab", hl.dsp.window.cycle_next({ next = true }))
+hl.bind("ALT + SHIFT + Tab", hl.dsp.window.cycle_next({ next = false }))
 hl.bind("ALT + SHIFT + Tab", hl.dsp.window.alter_zorder({ mode = "top" }))
 
 if layout == "master" then
@@ -142,7 +143,7 @@ hl.bind("SUPER + mouse:272", hl.dsp.window.float({ action = "toggle" }), { mouse
 
 if layout == "dwindle" then
     hl.bind("SUPER + mouse:273", hl.dsp.layout("togglesplit"), { mouse = true, click = true })
-else
+elseif layout =="master" then
     hl.bind("SUPER + mouse:273", hl.dsp.layout("swapwithmaster"), { mouse = true, click = true })
 end
 

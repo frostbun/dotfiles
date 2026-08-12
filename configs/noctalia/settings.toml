@@ -32,8 +32,14 @@ margin_edge = 8
 margin_ends = 8
 radius = 8
 scale = 1.5
-start = ["control-center", "workspaces", "spacer", "active_window"]
+start = ["workspaces", "spacer", "active_window"]
 thickness = 42
+
+[bar.default.dead_zone.actions]
+left = "panel-toggle control-center home"
+right = "panel-toggle noctalia/wallhaven:browser"
+scroll_down = "workspace-switch next"
+scroll_up = "workspace-switch prev"
 
 [brightness]
 enable_ddcutil = true
@@ -64,8 +70,17 @@ enabled = true
 [notification]
 position = "top_center"
 
+[plugin_settings."noctalia/kaomoji"]
+notify_on_copy = false
+
+[plugins]
+enabled = ["noctalia/kaomoji", "noctalia/wallhaven"]
+
 [shell]
 polkit_agent = true
+
+[shell.launcher]
+categories = false
 
 [shell.screenshot]
 directory = "/home/frostbun/Pictures/Screenshots"

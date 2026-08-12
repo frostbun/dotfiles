@@ -16,8 +16,12 @@ hl.config({
         preserve_split = true,
     },
     master = {
-        new_status = "master",
+        new_status = "inherit",
         mfact = 0.7,
+    },
+    scrolling = {
+        column_width = 0.9,
+        focus_fit_method = 0,
     },
     decoration = {
         rounding = 8,

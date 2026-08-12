@@ -1,4 +1,4 @@
-layout = "master"
+layout = "scrolling"
 
 require("./hyprland/*.lua")
 require("./hyprland/custom/*.lua")
