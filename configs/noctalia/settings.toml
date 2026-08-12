@@ -64,9 +64,6 @@ auto_locate = true
 [lockscreen]
 blurred_desktop = true
 
-[nightlight]
-enabled = true
-
 [notification]
 position = "top_center"
 
