@@ -35,6 +35,10 @@ scale = 1.5
 start = ["control-center", "workspaces", "spacer", "active_window"]
 thickness = 42
 
+[brightness]
+enable_ddcutil = true
+sync_all_monitors = true
+
 [idle]
 pre_action_fade_seconds = 30
 
@@ -48,25 +52,27 @@ action = "screen_off"
 enabled = true
 timeout = 330
 
+[location]
+auto_locate = true
+
 [lockscreen]
 blurred_desktop = true
+
+[nightlight]
+enabled = true
 
 [notification]
 position = "top_center"
 
 [shell]
 polkit_agent = true
-time_format = "{:%a %b %d %I:%M:%S %p}"
 
 [shell.screenshot]
 directory = "/home/frostbun/Pictures/Screenshots"
 
 [theme]
 builtin = "Tokyo-Night"
-community_palette = "Oxocarbon"
-mode = "dark"
 source = "builtin"
-wallpaper_scheme = "m3-content"
 
 [theme.templates]
 builtin_ids = ["alacritty", "btop", "cava", "hyprland", "kitty"]
