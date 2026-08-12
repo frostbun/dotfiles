@@ -26,7 +26,6 @@ bat-extras
 nmap
 google-chrome
 discord
-alacritty
 kitty
 cava
 cloudflared

@@ -74,16 +74,14 @@ directory = "/home/frostbun/Pictures/Screenshots"
 builtin = "Tokyo-Night"
 
 [theme.templates]
-builtin_ids = ["alacritty", "btop", "cava", "hyprland", "kitty"]
+builtin_ids = ["btop", "cava", "hyprland", "kitty"]
 community_ids = [
     "opencode",
     "discord",
     "blender",
     "darktable",
     "gimp",
-    "libreoffice",
     "vscode",
-    "steam",
     "fastfetch",
     "obs",
     "bat",
