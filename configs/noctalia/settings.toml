@@ -99,6 +99,9 @@ community_ids = [
     "yazi",
 ]
 
+[wallpaper]
+directory = "/home/frostbun/Pictures/Wallpapers"
+
 [wallpaper.default]
 path = "/home/frostbun/.config/background"
 
