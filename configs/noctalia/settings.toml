@@ -54,6 +54,7 @@ timeout = 300
 [idle.behavior.screen-off]
 action = "screen_off"
 enabled = true
+locked_timeout = 30
 timeout = 330
 
 [location]
