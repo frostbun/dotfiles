@@ -34,15 +34,6 @@ if ! pkg_installed reflector; then
 fi
 
 
-if ! pkg_installed cloudflare-warp-bin; then
-    echo "Installing Cloudflare Warp..."
-    install cloudflare-warp-bin
-    sudo systemctl enable --now warp-svc.service
-    sleep 5
-    yes | warp-cli registration new
-fi
-
-
 echo "Updating system..."
 yay --noconfirm
 
@@ -110,6 +101,7 @@ fi
 
 echo "Enabling required services..."
 sudo systemctl enable --now sshd.service
+sudo systemctl enable --now warp-svc.service
 
 
 if prompt "Install Zsh"; then
