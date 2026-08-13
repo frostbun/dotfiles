@@ -111,6 +111,9 @@ path = "/home/frostbun/.config/background"
 [widget.audio_visualizer]
 color_2 = "secondary"
 
+[widget.bluetooth]
+show_label = true
+
 [widget.clock]
 format = "{:%a %b %d %I:%M:%S %p}"
 
@@ -121,9 +124,15 @@ visualization = "none"
 hide_when_no_media = true
 title_scroll = "on_hover"
 
+[widget.network]
+show_vpn_label = true
+
 [widget.ram]
 stat = "ram_pct"
 visualization = "none"
+
+[widget.spacer]
+length = 10
 
 [widget.tray]
 drawer = true
