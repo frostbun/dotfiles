@@ -23,6 +23,7 @@ echo "Enabling required services..."
 sudo systemctl enable --now ssh.service
 
 sudo touch /etc/containers/nodocker
+echo -e "[engine]\ncompose_warning_logs = false" | sudo tee /etc/containers/containers.conf
 systemctl --user enable --now podman-restart.service
 
 
