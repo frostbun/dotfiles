@@ -66,6 +66,11 @@ blurred_desktop = true
 [notification]
 position = "top_center"
 
+[osd]
+offset_y = 4
+position = "bottom_center"
+position_vertical = "center_right"
+
 [plugin_settings."noctalia/kaomoji"]
 notify_on_copy = false
 
