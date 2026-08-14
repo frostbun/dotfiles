@@ -27,7 +27,7 @@ hl.bind("SUPER + W", hl.dsp.exec_cmd("noctalia msg window-switcher"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("nautilus"))
 hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd("xdg-terminal-exec yazi", { float = true }))
 hl.bind("SUPER + R", hl.dsp.exec_cmd("xdg-terminal-exec"))
-hl.bind("SUPER + T", hl.dsp.exec_cmd("google-chrome-stable"))
+hl.bind("SUPER + T", hl.dsp.exec_cmd("google-chrome-stable --profile-directory='Default'"))
 
 
 hl.bind("SUPER + A", hl.dsp.exec_cmd("pidof hyprpicker || hyprpicker --render-inactive --autocopy"))
