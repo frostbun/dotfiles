@@ -16,7 +16,8 @@ end = [
     "network",
     "bluetooth",
     "spacer",
-    "volume",
+    "output_volume",
+    "input_volume",
     "brightness",
     "spacer",
     "cpu",
@@ -121,6 +122,7 @@ color_2 = "secondary"
 show_label = true
 
 [widget.clock]
+anchor = true
 format = "{:%a %b %d %I:%M:%S %p}"
 
 [widget.cpu]
