@@ -12,6 +12,9 @@ eza
 jq
 btop
 yazi
+7zip
+unzip
+unrar
 ffmpeg
 fastfetch
 fd
