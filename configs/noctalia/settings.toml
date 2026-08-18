@@ -50,6 +50,9 @@ scroll_up = "workspace-switch prev"
 enable_ddcutil = true
 sync_all_monitors = true
 
+[desktop_widgets]
+enabled = false
+
 [idle]
 pre_action_fade_seconds = 30
 
