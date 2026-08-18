@@ -1,0 +1,6 @@
+git-lfs
+podman
+podman-compose
+podman-docker
+opencode
+claude-code

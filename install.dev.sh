@@ -12,6 +12,7 @@ echo -e "[engine]\ncompose_warning_logs = false" | sudo tee /etc/containers/cont
 systemctl --user enable --now podman-restart.service
 
 
+link systemd ~/.config/systemd
 link opencode ~/.config/opencode
 
 

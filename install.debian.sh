@@ -13,7 +13,7 @@ sudo apt upgrade
 
 
 echo "Installing required packages..."
-sudo apt install -y $(cat packages/required.debian.txt)
+sudo apt install -y $(cat packages/debian.txt)
 
 curl -fsSL https://opencode.ai/install | bash
 curl -fsSL https://claude.ai/install.sh | bash

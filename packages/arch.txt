@@ -26,9 +26,3 @@ cpio
 go
 python
 bat-extras
-git-lfs
-podman
-podman-compose
-podman-docker
-opencode
-claude-code

@@ -4,7 +4,7 @@ source ./common.sh
 
 
 echo "Installing laptop packages..."
-install < packages/required.laptop.txt
+install < packages/laptop.txt
 
 
 sudo systemctl enable --now tlp.service
