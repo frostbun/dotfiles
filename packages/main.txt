@@ -4,6 +4,8 @@ vesktop
 kitty
 cava
 cloudflared
+tailscale
+rustdesk-bin
 speedtest-cli
 libreoffice-still
 noto-fonts
