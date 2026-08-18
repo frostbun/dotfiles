@@ -3,6 +3,7 @@ man-db
 curl
 wget
 lazygit
+vim
 tmux
 parallel
 bat
@@ -14,7 +15,6 @@ btop
 yazi
 7zip
 unzip
-unrar
 ffmpeg
 fastfetch
 fd
