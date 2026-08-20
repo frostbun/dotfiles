@@ -2,5 +2,5 @@
 
 
 ```sh
-curl -fsSL https://dotfiles.frostbun.com/install.all.sh | bash
+curl -fsSL https://dotfiles.frostbun.com/install.sh | bash
 ```
