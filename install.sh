@@ -71,8 +71,7 @@ fi
 
 
 if prompt "Config sddm autologin"; then
-    echo "[Autologin]" | sudo tee /etc/sddm.conf
-    echo "User=$USER" | sudo tee -a /etc/sddm.conf
+    echo -e "[Autologin]\nUser=$USER" | sudo tee /etc/sddm.conf
 fi
 
 
