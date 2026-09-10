@@ -5,8 +5,8 @@ podman-docker
 uv
 unityhub
 dotnet-sdk
-nodejs
-npm
+bun
+github-cli
 jdk-openjdk
 android-tools
 android-udev
