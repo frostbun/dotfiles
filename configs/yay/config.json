@@ -1,3 +1,6 @@
 {
-    "removemake": "yes"
+	"removemake": "yes",
+	"maxconcurrentdownloads": 8,
+	"sudoloop": true,
+	"devel": true
 }

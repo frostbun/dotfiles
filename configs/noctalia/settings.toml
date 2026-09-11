@@ -93,6 +93,9 @@ polkit_agent = true
 [shell.launcher]
 categories = false
 
+[shell.panel]
+open_near_click_control_center = true
+
 [shell.screen_corners]
 enabled = true
 size = 16
