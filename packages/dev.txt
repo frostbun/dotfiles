@@ -6,6 +6,7 @@ uv
 unityhub
 dotnet-sdk
 bun
+nodejs
 github-cli
 jdk-openjdk
 android-tools
