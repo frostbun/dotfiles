@@ -3,6 +3,7 @@ podman
 podman-compose
 podman-docker
 uv
+rustup
 unityhub
 dotnet-sdk
 bun
