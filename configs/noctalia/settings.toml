@@ -109,15 +109,12 @@ builtin = "Tokyo-Night"
 [theme.templates]
 builtin_ids = ["btop", "cava", "hyprland", "kitty"]
 community_ids = [
-    "opencode",
     "discord",
-    "blender",
-    "darktable",
-    "gimp",
     "vscode",
     "fastfetch",
-    "obs",
+    "hyprtoolkit",
     "bat",
+    "fzf",
     "lazygit",
     "yazi",
 ]
