@@ -1,7 +1,6 @@
 noctalia
 hyprpicker
 hyprshot
-swappy
 wl-clipboard
 nautilus
 decibels

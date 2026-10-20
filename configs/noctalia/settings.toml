@@ -72,6 +72,7 @@ auto_locate = true
 
 [lockscreen]
 blurred_desktop = true
+transition = []
 
 [notification]
 position = "top_center"
@@ -101,7 +102,9 @@ enabled = true
 size = 16
 
 [shell.screenshot]
+annotate = true
 directory = "/home/frostbun/Pictures/Screenshots"
+skip_annotate_on_copy_save = true
 
 [theme]
 builtin = "Tokyo-Night"

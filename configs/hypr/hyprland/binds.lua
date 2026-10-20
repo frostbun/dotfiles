@@ -47,7 +47,7 @@ end
 hl.bind("SUPER + Z", hl.dsp.exec_cmd("noctalia msg settings-open"))
 hl.bind("SUPER + SHIFT + Z", hl.dsp.exec_cmd("code ~/dotfiles"))
 hl.bind("SUPER + SHIFT + CTRL + Z", hl.dsp.exec_cmd("code ~/.local/state/noctalia"))
-hl.bind("SUPER + X", hl.dsp.exec_cmd("wl-paste | swappy -f -"))
+hl.bind("SUPER + X", hl.dsp.exec_cmd("noctalia msg annotate"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("noctalia msg panel-open clipboard"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("noctalia msg panel-open launcher /emo"))
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("noctalia msg panel-open launcher /kao"))
