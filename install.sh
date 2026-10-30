@@ -23,8 +23,8 @@ fi
 
 echo "Creating symlinks for dotfiles..."
 link kitty ~/.config/kitty
+link alacritty ~/.config/alacritty
 link fcitx5 ~/.config/fcitx5
-link cava ~/.config/cava
 link .icons ~/.icons
 
 dconf write /com/github/stunkymonkey/nautilus-open-any-terminal/terminal "'custom'"
@@ -45,11 +45,6 @@ fi
 
 if prompt "Install games"; then
     ./install.games.sh
-fi
-
-
-if prompt "Install GNOME packages"; then
-    ./install.gnome.sh
 fi
 
 

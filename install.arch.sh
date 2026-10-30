@@ -58,6 +58,8 @@ fi
 echo "Installing required packages..."
 install < packages/arch.txt
 
+bun install -g @oh-my-pi/pi-coding-agent
+
 
 echo "Enabling required services..."
 sudo systemctl enable --now sshd.service
@@ -68,23 +70,15 @@ if prompt "Install Zsh"; then
 fi
 
 
-if prompt "Install Vim"; then
-    ./install.vim.sh
-fi
-
-
-if prompt "Install Tmux"; then
-    ./install.tmux.sh
+if prompt "Install LazyVim"; then
+    git clone https://github.com/LazyVim/starter ~/.config/nvim
+    sudo git clone https://github.com/LazyVim/starter /root/.config/nvim
 fi
 
 
 echo "Creating symlinks for dotfiles..."
 link .gitconfig ~/.gitconfig
-link lazygit ~/.config/lazygit
-link bat ~/.config/bat
-link btop ~/.config/btop
 link fastfetch ~/.config/fastfetch
-link yazi ~/.config/yazi
 
 sudo cp -f configs/zram-generator.conf /etc/systemd/zram-generator.conf
 sudo cp -f configs/logind.conf /etc/systemd/logind.conf

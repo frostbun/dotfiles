@@ -3,8 +3,7 @@ man-db
 curl
 wget
 lazygit
-vim
-tmux
+neovim
 parallel
 bat
 ripgrep
@@ -25,4 +24,6 @@ meson
 cpio
 go
 python
+bun
 bat-extras
+herdr-bin

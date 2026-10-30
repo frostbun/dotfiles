@@ -18,7 +18,6 @@
     fr = "!git fetch && git stash save && git rebase && git stash pop"
     frp = "!git fetch && git stash save && git rebase && git push && git stash pop"
 [core]
-    editor = vim
     autocrlf = input
 [init]
     defaultBranch = master

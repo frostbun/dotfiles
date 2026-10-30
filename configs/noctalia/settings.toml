@@ -110,14 +110,15 @@ skip_annotate_on_copy_save = true
 builtin = "Tokyo-Night"
 
 [theme.templates]
-builtin_ids = ["btop", "cava", "hyprland", "kitty"]
+builtin_ids = ["alacritty", "btop", "cava", "hyprland", "kitty"]
 community_ids = [
     "discord",
+    "lazyvim",
     "vscode",
     "fastfetch",
-    "hyprtoolkit",
     "bat",
     "fzf",
+    "herdr",
     "lazygit",
     "yazi",
 ]

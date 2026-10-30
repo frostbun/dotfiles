@@ -3,8 +3,7 @@ man-db
 curl
 wget
 lazygit
-vim
-tmux
+neovim
 parallel
 bat
 ripgrep
@@ -19,7 +18,3 @@ ffmpeg
 fastfetch
 fd-find
 ssh
-git-lfs
-podman
-podman-compose
-podman-docker

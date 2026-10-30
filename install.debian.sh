@@ -15,16 +15,13 @@ sudo apt upgrade
 echo "Installing required packages..."
 sudo apt install -y $(cat packages/debian.txt)
 
-curl -fsSL https://opencode.ai/install | bash
-curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://herdr.dev/install.sh | bash
+curl -fsSL https://bun.sh/install | bash
+bun install -g @oh-my-pi/pi-coding-agent
 
 
 echo "Enabling required services..."
 sudo systemctl enable --now ssh.service
-
-sudo touch /etc/containers/nodocker
-echo -e "[engine]\ncompose_warning_logs = false" | sudo tee /etc/containers/containers.conf
-systemctl --user enable --now podman-restart.service
 
 
 if prompt "Install Zsh"; then
@@ -32,24 +29,15 @@ if prompt "Install Zsh"; then
 fi
 
 
-if prompt "Install Vim"; then
-    ./install.vim.sh
-fi
-
-
-if prompt "Install Tmux"; then
-    ./install.tmux.sh
+if prompt "Install LazyVim"; then
+    git clone https://github.com/LazyVim/starter ~/.config/nvim
+    sudo git clone https://github.com/LazyVim/starter /root/.config/nvim
 fi
 
 
 echo "Creating symlinks for dotfiles..."
 link .gitconfig ~/.gitconfig
-link lazygit ~/.config/lazygit
-link bat ~/.config/bat
-link btop ~/.config/btop
 link fastfetch ~/.config/fastfetch
-link yazi ~/.config/yazi
-link opencode ~/.config/opencode
 
 
 echo "Cleaning up..."

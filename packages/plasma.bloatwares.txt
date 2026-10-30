@@ -1,4 +1,0 @@
-dolphin
-konsole
-kate
-ark

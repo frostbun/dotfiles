@@ -25,7 +25,6 @@ audacity
 vial-appimage
 gparted
 xorg-xhost
-dconf-editor
 xdg-terminal-exec
 visual-studio-code-bin
 nautilus-open-any-terminal

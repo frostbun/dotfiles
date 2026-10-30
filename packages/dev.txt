@@ -4,14 +4,8 @@ podman-compose
 podman-docker
 uv
 rustup
-unityhub
 dotnet-sdk
-bun
-nodejs
 github-cli
 jdk-openjdk
 android-tools
 android-udev
-rclone
-opencode
-claude-code
