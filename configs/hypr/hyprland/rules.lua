@@ -28,27 +28,6 @@ hl.window_rule({
 
 hl.window_rule({
     match = {
-        class = "org.pulseaudio.pavucontrol",
-    },
-    float = true,
-})
-
-hl.window_rule({
-    match = {
-        class = "blueman-manager",
-    },
-    float = true,
-})
-
-hl.window_rule({
-    match = {
-        class = "nm-connection-editor",
-    },
-    float = true,
-})
-
-hl.window_rule({
-    match = {
         class = "org.fcitx.fcitx5-config-qt",
     },
     float = true,
