@@ -69,59 +69,43 @@ if layout == "master" then
 end
 
 
-hl.bind("SUPER + Left", hl.dsp.focus({ direction = "left" }))
-hl.bind("SUPER + Down", hl.dsp.focus({ direction = "down" }))
-hl.bind("SUPER + Up", hl.dsp.focus({ direction = "up" }))
-hl.bind("SUPER + Right", hl.dsp.focus({ direction = "right" }))
-hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }))
-hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }))
-hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }))
-hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }))
+for _, d in ipairs({
+    { "Left", "H", "left", -10, 0 },
+    { "Down", "J", "down", 0, 10 },
+    { "Up", "K", "up", 0, -10 },
+    { "Right", "L", "right", 10, 0 },
+}) do
+    local arrow, letter, direction, x, y = d[1], d[2], d[3], d[4], d[5]
+    local focus = hl.dsp.focus({ direction = direction })
+    local move = hl.dsp.window.move({ direction = direction })
+    local resize = hl.dsp.window.resize({ x = x, y = y, relative = true })
 
-hl.bind("SUPER + SHIFT + Left", hl.dsp.window.move({ direction = "left" }))
-hl.bind("SUPER + SHIFT + Down", hl.dsp.window.move({ direction = "down" }))
-hl.bind("SUPER + SHIFT + Up", hl.dsp.window.move({ direction = "up" }))
-hl.bind("SUPER + SHIFT + Right", hl.dsp.window.move({ direction = "right" }))
-hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
-hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
-
-hl.bind("SUPER + SHIFT + CTRL + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + CTRL + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + CTRL + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + CTRL + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + CTRL + H", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + CTRL + J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + CTRL + K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
-hl.bind("SUPER + SHIFT + CTRL + L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
-
-
-for i = 1, 9 do
-    hl.bind("SUPER + " .. i, hl.dsp.focus({ workspace = i }))
+    hl.bind("SUPER + " .. arrow, focus)
+    hl.bind("SUPER + " .. letter, focus)
+    hl.bind("SUPER + SHIFT + " .. arrow, move)
+    hl.bind("SUPER + SHIFT + " .. letter, move)
+    hl.bind("SUPER + SHIFT + CTRL + " .. arrow, resize, { repeating = true })
+    hl.bind("SUPER + SHIFT + CTRL + " .. letter, resize, { repeating = true })
 end
 
-hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }))
+
+for i = 1, 10 do
+    local key = i % 10
+    hl.bind("SUPER + " .. key, hl.dsp.focus({ workspace = i }))
+    hl.bind("SUPER + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+    hl.bind("SUPER + SHIFT + CTRL + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
+end
+
 hl.bind("SUPER + Minus", hl.dsp.focus({ workspace = "empty" }))
 hl.bind("SUPER + Q", hl.dsp.workspace.toggle_special(""))
 hl.bind("SUPER + Tab", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind("SUPER + Grave", hl.dsp.focus({ workspace = "m-1" }))
 
-for i = 1, 9 do
-    hl.bind("SUPER + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
-end
-
-hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 hl.bind("SUPER + SHIFT + Minus", hl.dsp.window.move({ workspace = "empty" }))
 hl.bind("SUPER + SHIFT + Q", hl.dsp.window.move({ workspace = "special" }))
 hl.bind("SUPER + SHIFT + Tab", hl.dsp.window.move({ workspace = "m+1" }))
 hl.bind("SUPER + SHIFT + Grave", hl.dsp.window.move({ workspace = "m-1" }))
 
-for i = 1, 9 do
-    hl.bind("SUPER + SHIFT + CTRL + " .. i, hl.dsp.window.move({ workspace = i, follow = false }))
-end
-
-hl.bind("SUPER + SHIFT + CTRL + 0", hl.dsp.window.move({ workspace = 10, follow = false }))
 hl.bind("SUPER + SHIFT + CTRL + Minus", hl.dsp.window.move({ workspace = "empty", follow = false }))
 hl.bind("SUPER + SHIFT + CTRL + Q", hl.dsp.window.move({ workspace = "special", follow = false }))
 hl.bind("SUPER + SHIFT + CTRL + Tab", hl.dsp.window.move({ workspace = "m+1", follow = false }))
