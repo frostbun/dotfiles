@@ -6,10 +6,10 @@ hl.config({
 })
 
 
-hl.gesture({ fingers = 3, direction = "left", action = function() hl.dsp.focus({ direction = "left" }) end })
-hl.gesture({ fingers = 3, direction = "down", action = function() hl.dsp.focus({ direction = "down" }) end })
-hl.gesture({ fingers = 3, direction = "up", action = function() hl.dsp.focus({ direction = "up" }) end })
-hl.gesture({ fingers = 3, direction = "right", action = function() hl.dsp.focus({ direction = "right" }) end })
+hl.gesture({ fingers = 3, direction = "left", action = function() hl.dispatch(hl.dsp.focus({ direction = "right" })) end })
+hl.gesture({ fingers = 3, direction = "down", action = function() hl.dispatch(hl.dsp.focus({ direction = "up" })) end })
+hl.gesture({ fingers = 3, direction = "up", action = function() hl.dispatch(hl.dsp.focus({ direction = "down" })) end })
+hl.gesture({ fingers = 3, direction = "right", action = function() hl.dispatch(hl.dsp.focus({ direction = "left" })) end })
 
 hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
 
