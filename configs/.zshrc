@@ -6,7 +6,7 @@
 #     esac
 # }
 
-fastfetch 2>/dev/null
+[[ -z $OMPCODE ]] && fastfetch 2>/dev/null
 # quote 2>/dev/null
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
