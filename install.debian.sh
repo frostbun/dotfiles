@@ -31,7 +31,6 @@ fi
 
 if prompt "Install LazyVim"; then
     git clone https://github.com/LazyVim/starter ~/.config/nvim
-    sudo git clone https://github.com/LazyVim/starter /root/.config/nvim
 fi
 
 
