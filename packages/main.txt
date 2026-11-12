@@ -22,7 +22,6 @@ vlc-plugin-ffmpeg
 gimp
 darktable
 audacity
-vial-appimage
 gparted
 xorg-xhost
 xdg-terminal-exec
