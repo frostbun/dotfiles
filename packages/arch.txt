@@ -25,5 +25,6 @@ cpio
 go
 python
 bun
+nodejs
 bat-extras
 herdr-bin
