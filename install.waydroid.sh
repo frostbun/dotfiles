@@ -4,7 +4,7 @@ source ./common.sh
 
 
 echo "Installing Waydroid..."
-install waydroid
+install waydroid android-tools android-udev
 sudo waydroid init
 
 sudo sed -i 's/^auto_adb = False/auto_adb = True/' /var/lib/waydroid/waydroid.cfg

@@ -7,5 +7,3 @@ rustup
 dotnet-sdk
 github-cli
 jdk-openjdk
-android-tools
-android-udev

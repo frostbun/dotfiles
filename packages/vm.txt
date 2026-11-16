@@ -1,5 +1,0 @@
-git-lfs
-podman
-podman-compose
-podman-docker
-claude-code

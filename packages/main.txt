@@ -25,7 +25,7 @@ audacity
 gparted
 xorg-xhost
 xdg-terminal-exec
-visual-studio-code-bin
+zed
 nautilus-open-any-terminal
 nautilus-admin-gtk4
 nautilus-code
