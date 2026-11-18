@@ -85,6 +85,9 @@ position_vertical = "center_right"
 [plugin_settings."noctalia/kaomoji"]
 notify_on_copy = false
 
+[plugin_settings."noctalia/wallhaven"]
+browser_open_near_click = true
+
 [plugins]
 enabled = ["noctalia/kaomoji", "noctalia/wallhaven"]
 
@@ -96,6 +99,7 @@ categories = false
 
 [shell.panel]
 open_near_click_control_center = true
+open_near_click_session = true
 
 [shell.screen_corners]
 enabled = true
@@ -112,15 +116,15 @@ builtin = "Tokyo-Night"
 [theme.templates]
 builtin_ids = ["alacritty", "btop", "cava", "hyprland", "kitty"]
 community_ids = [
-    "discord",
-    "lazyvim",
-    "vscode",
-    "fastfetch",
     "bat",
+    "discord",
+    "fastfetch",
     "fzf",
     "herdr",
     "lazygit",
+    "lazyvim",
     "yazi",
+    "zed",
 ]
 
 [wallpaper]

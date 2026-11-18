@@ -16,6 +16,7 @@ fcitx5-qt
 fcitx5-gtk
 fcitx5-configtool
 fcitx5-unikey
+fcitx5-bamboo
 transmission-qt
 vlc
 vlc-plugin-ffmpeg
@@ -27,5 +28,3 @@ xorg-xhost
 xdg-terminal-exec
 zed
 nautilus-open-any-terminal
-nautilus-admin-gtk4
-nautilus-code
