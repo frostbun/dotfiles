@@ -12,11 +12,8 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 fcitx5
-fcitx5-qt
-fcitx5-gtk
 fcitx5-configtool
-fcitx5-unikey
-fcitx5-bamboo
+fcitx5-lotus-bin
 transmission-qt
 vlc
 vlc-plugin-ffmpeg
